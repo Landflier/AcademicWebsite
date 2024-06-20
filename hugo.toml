@@ -1,3 +1,23 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://landflier.cloud/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'VRY personal website'
+canonifyurls = true
+languagecode = "en"
+theme = "black-and-light"
+
+pygmentsstyle       = "bw"
+pygmentscodefences  = true
+
+[params]
+  sitename = "Black & Light"
+  disableWebFonts = false
+
+[[menu.main]]
+    name = "About"
+    url  = "https://github.com/Landflier/hugo-black-and-light-theme"
+[[menu.main]]
+    name = "Projects"
+    url  = "https://github.com/Landflier/hugo-black-and-light-theme"
+[[menu.main]]
+    name = "Resume"
+    url  = "https://github.com/Landflier/hugo-black-and-light-theme"
