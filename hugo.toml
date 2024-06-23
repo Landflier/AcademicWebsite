@@ -1,23 +1,25 @@
 baseURL = 'https://landflier.cloud/'
 languageCode = 'en-us'
-title = 'VRY personal website'
+title = 'VasilRYordnov'
+
 canonifyurls = true
-languagecode = "en"
+
+author = "Vasil R Yordanov"
 theme = "black-and-light"
 
-pygmentsstyle       = "bw"
+# pygmentsstyle       = "bw"
 pygmentscodefences  = true
 
 [params]
-  sitename = "Black & Light"
+  sitename = "Vasil Radkov Yordanov"
   disableWebFonts = false
+  description= "My perosnal website, where I share thoughts about conferences I attend, papers and books I read, physics, philisophy, cinema, and open-source"
 
 [[menu.main]]
     name = "About"
-    url  = "https://github.com/Landflier/hugo-black-and-light-theme"
+[[menu.main]]
+    name = "Research"
+[[menu.main]]
+    name = "Blog"
 [[menu.main]]
     name = "Projects"
-    url  = "https://github.com/Landflier/hugo-black-and-light-theme"
-[[menu.main]]
-    name = "Resume"
-    url  = "https://github.com/Landflier/hugo-black-and-light-theme"
