@@ -1,3 +1,3 @@
 [submodule "themes/black-and-light"]
 	path = themes/black-and-light
-	url = git@github.com:Landflier/hugo-black-and-light-theme.git
+	url = black_and_light-repo:Landflier/hugo-black-and-light-theme.git
