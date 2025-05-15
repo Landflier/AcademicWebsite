@@ -17,9 +17,17 @@ pygmentscodefences  = true
 
 [[menu.main]]
     name = "About"
+    url = "/about/"
+    weight = 1
 [[menu.main]]
     name = "Research"
+    url = "/research/"
+    weight = 2
 [[menu.main]]
     name = "Blog"
+    url = "/blog/"
+    weight = 3
 [[menu.main]]
     name = "Projects"
+    url = "/projects/"
+    weight = 4

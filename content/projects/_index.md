@@ -1,10 +1,8 @@
----
-title: "Projects"
-date: 2023-07-13
-draft: false
----
-
-# Projects
++++
+title = "Projects"
+date = "2023-07-13"
+draft = false
++++
 
 This page showcases various projects I've been working on, including:
 
