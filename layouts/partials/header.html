@@ -24,6 +24,11 @@
 
     {{ partial "styles.html" . }}
     <link rel="stylesheet" href="/css/custom.css">
+    
+    <!-- Additional CSS for specific page types -->
+    {{ if eq .Type "projects" }}
+    <link rel="stylesheet" href="/css/projects.css">
+    {{ end }}
 
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -31,13 +36,11 @@
   </head>
 
   <body>
-    <section id=nav>
+    <section id="nav">
       <h1><a class="h-card" href="/">{{ .Site.Params.sitename }}</a></h1>
       <ul>
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
-    </section>
-  </body>
-</html> 
+    </section> 

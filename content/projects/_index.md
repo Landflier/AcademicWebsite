@@ -1,10 +1,8 @@
-+++
-title = "Projects"
-date = "2023-07-13"
-draft = false
-+++
+---
+title: "Projects"
+date: 2024-07-30
+type: "projects"
+layout: "list"
+---
 
-This page showcases various projects I've been working on, including:
-
-## [Chip Design](/projects/chip-design/)
-Open-source chip design projects using various PDKs, including Sky130nm. 
+On this page, I have listed projects on which I have worked throughout the years. These can range from software to hardware, to organizing events, etc.

@@ -1,7 +1,7 @@
 ---
 title: "Sky130nm Op-Amp Design"
 date: 2023-07-13
-draft: false
+draft: true
 ---
 
 # Two-Stage Operational Amplifier in Sky130nm PDK

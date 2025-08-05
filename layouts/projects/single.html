@@ -1,0 +1,102 @@
+{{ define "main" }}
+<article class="project-single">
+    <header class="project-header">
+        <h1 class="project-title">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+        <p class="project-subtitle">{{ .Params.subtitle }}</p>
+        {{ end }}
+        
+        <div class="project-meta">
+            {{ if .Params.event }}
+            <div class="meta-item">
+                <strong>Event:</strong> {{ .Params.event }}
+            </div>
+            {{ end }}
+            {{ if .Params.project_type }}
+            <div class="meta-item">
+                <strong>Project Type:</strong> {{ .Params.project_type }}
+            </div>
+            {{ end }}
+            {{ if .Params.course }}
+            <div class="meta-item">
+                <strong>Course:</strong> {{ .Params.course }}
+            </div>
+            {{ end }}
+            {{ if .Params.semester }}
+            <div class="meta-item">
+                <strong>Semester:</strong> {{ .Params.semester }}
+            </div>
+            {{ end }}
+            {{ if .Params.instructor }}
+            <div class="meta-item">
+                <strong>Instructor:</strong> {{ .Params.instructor }}
+            </div>
+            {{ end }}
+            {{ if .Params.collaborators }}
+            <div class="meta-item">
+                <strong>Collaborators:</strong> {{ delimit .Params.collaborators ", " }}
+            </div>
+            {{ end }}
+            {{ if .Date }}
+            <div class="meta-item">
+                <strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}
+            </div>
+            {{ end }}
+        </div>
+
+        {{ if .Params.technologies }}
+        <div class="project-technologies">
+            <strong>Technologies:</strong>
+            {{ range .Params.technologies }}
+            <span class="tech-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    {{ if .Params.image }}
+    <div class="project-hero-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+        {{ if .Params.image_caption }}
+        <p class="image-caption">{{ .Params.image_caption }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="project-content">
+        {{ .Content }}
+    </div>
+
+    {{ if or .Params.github .Params.demo .Params.paper .Params.presentation }}
+    <section class="project-resources">
+        <h2>Resources & Links</h2>
+        <div class="resource-links">
+            {{ if .Params.github }}
+            <a href="{{ .Params.github }}" class="resource-link github-link" target="_blank" rel="noopener">
+                <span>View on GitHub</span>
+            </a>
+            {{ end }}
+            {{ if .Params.demo }}
+            <a href="{{ .Params.demo }}" class="resource-link demo-link" target="_blank" rel="noopener">
+                <span>Live Demo</span>
+            </a>
+            {{ end }}
+            {{ if .Params.paper }}
+            <a href="{{ .Params.paper }}" class="resource-link paper-link" target="_blank" rel="noopener">
+                <span>Read Paper</span>
+            </a>
+            {{ end }}
+            {{ if .Params.presentation }}
+            <a href="{{ .Params.presentation }}" class="resource-link presentation-link" target="_blank" rel="noopener">
+                <span>Presentation</span>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    <nav class="project-navigation">
+        <a href="/projects/" class="back-link">&larr; Back to Projects</a>
+    </nav>
+</article>
+{{ end }}
