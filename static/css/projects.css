@@ -1,4 +1,4 @@
-/* Projects Page Styles - Academic Design */
+/* Projects & Blog Page Styles - Academic Design */
 
 /* Projects List Page */
 .projects-container {
@@ -440,4 +440,60 @@
         box-shadow: none;
         border: 1px solid #ccc;
     }
+}
+
+/* Blog-specific styling extensions */
+.blog-container {
+    /* Inherits all projects-container styles */
+}
+
+.blog-header {
+    /* Inherits all projects-header styles */
+}
+
+.blog-intro {
+    /* Inherits all projects-intro styles */
+}
+
+.blog-grid {
+    /* Inherits all projects-grid styles */
+}
+
+.blog-card {
+    /* Inherits all project-card styles */
+}
+
+.blog-post-meta .blog-read-time {
+    background: #f0f9ff;
+    color: #075985;
+    border-color: #bae6fd;
+}
+
+.blog-tag {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #fde68a;
+}
+
+.blog-read-more {
+    background: #f0f9ff;
+    color: #075985;
+    border-color: #bae6fd;
+}
+
+.blog-read-more:hover {
+    background: #075985;
+    color: #fff;
+}
+
+.blog-single {
+    /* Inherits all project-single styles */
+}
+
+.blog-content {
+    /* Inherits all project-content styles */
+}
+
+.blog-navigation {
+    /* Inherits all project-navigation styles */
 }

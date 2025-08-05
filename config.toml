@@ -8,6 +8,7 @@ author = "Vasil R Yordanov"
 theme = "black-and-light"
 
 pygmentscodefences = true
+summaryLength = 50
 
 [params]
   sitename = "Vasil Radkov Yordanov"

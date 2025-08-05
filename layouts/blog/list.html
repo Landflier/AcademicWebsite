@@ -1,0 +1,70 @@
+{{ define "main" }}
+<div class="projects-container blog-container">
+    <header class="projects-header blog-header">
+        <h1>{{ .Title }}</h1>
+        {{ if .Content }}
+        <div class="projects-intro blog-intro">
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </header>
+
+    <div class="projects-grid blog-grid">
+        {{ range .Pages }}
+        <article class="project-card blog-card">
+            <div class="project-header blog-post-header">
+                <h2 class="project-title blog-post-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                {{ if .Params.subtitle }}
+                <p class="project-subtitle blog-post-subtitle">{{ .Params.subtitle }}</p>
+                {{ end }}
+            </div>
+            
+            <div class="project-meta blog-post-meta">
+                {{ if .Params.date }}
+                <span class="project-date blog-post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                {{ end }}
+                {{ if .Params.readTime }}
+                <span class="blog-read-time">{{ .Params.readTime }} min read</span>
+                {{ else }}
+                <span class="blog-read-time">{{ .ReadingTime }} min read</span>
+                {{ end }}
+            </div>
+
+            {{ if .Params.image }}
+            <div class="project-image blog-post-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            {{ end }}
+
+            <div class="project-summary blog-post-summary">
+                {{ if .Params.description }}
+                    <p>{{ .Params.description }}</p>
+                {{ else if .Summary }}
+                    {{ .Summary | truncate 200 }}
+                {{ else }}
+                    <p>{{ .Content | plainify | truncate 150 }}...</p>
+                {{ end }}
+            </div>
+
+            <div class="project-tags blog-post-tags">
+                {{ if .Params.tags }}
+                <div class="tech-tags blog-tags">
+                    {{ range .Params.tags }}
+                    <span class="tech-tag blog-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+
+            <div class="project-links blog-post-links">
+                <a href="{{ .Permalink }}" class="project-link details-link blog-read-more">
+                    <span>Read More</span>
+                </a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

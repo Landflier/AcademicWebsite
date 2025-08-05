@@ -1,0 +1,76 @@
+{{ define "main" }}
+<article class="project-single blog-single">
+    <header class="project-header blog-post-header">
+        <h1 class="project-title blog-post-title">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+        <p class="project-subtitle blog-post-subtitle">{{ .Params.subtitle }}</p>
+        {{ end }}
+        
+        <div class="project-meta blog-post-meta">
+            {{ if .Date }}
+            <div class="meta-item">
+                <strong>Published:</strong> {{ .Date.Format "January 2, 2006" }}
+            </div>
+            {{ end }}
+            {{ if .Params.readTime }}
+            <div class="meta-item">
+                <strong>Reading Time:</strong> {{ .Params.readTime }} minutes
+            </div>
+            {{ else }}
+            <div class="meta-item">
+                <strong>Reading Time:</strong> {{ .ReadingTime }} minutes
+            </div>
+            {{ end }}
+            {{ if .Params.author }}
+            <div class="meta-item">
+                <strong>Author:</strong> {{ .Params.author }}
+            </div>
+            {{ end }}
+        </div>
+
+        {{ if .Params.tags }}
+        <div class="project-technologies blog-post-tags">
+            <strong>Tags:</strong>
+            {{ range .Params.tags }}
+            <span class="tech-tag blog-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    {{ if .Params.image }}
+    <div class="project-hero-image blog-hero-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+        {{ if .Params.image_caption }}
+        <p class="image-caption">{{ .Params.image_caption }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="project-content blog-content">
+        {{ .Content }}
+    </div>
+
+    {{ if or .Params.external_link .Params.source }}
+    <section class="project-resources blog-resources">
+        <h2>Additional Resources</h2>
+        <div class="resource-links">
+            {{ if .Params.external_link }}
+            <a href="{{ .Params.external_link }}" class="resource-link external-link" target="_blank" rel="noopener">
+                <span>External Link</span>
+            </a>
+            {{ end }}
+            {{ if .Params.source }}
+            <a href="{{ .Params.source }}" class="resource-link source-link" target="_blank" rel="noopener">
+                <span>Source</span>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    <nav class="project-navigation blog-navigation">
+        <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+    </nav>
+</article>
+{{ end }}

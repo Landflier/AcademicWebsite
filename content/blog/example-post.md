@@ -1,8 +1,10 @@
-+++
-title = "Example Blog Post"
-date = "2023-06-01"
-tags = ["example", "blog"]
-+++
+---
+title : "Example Blog Post"
+date : "2023-06-01"
+tags : ["example", "blog"]
+author : "Vasil R Yordanov"
+type : "blog"
+---
 
 # Example Blog Post
 
