@@ -9,6 +9,7 @@ theme = "black-and-light"
 
 pygmentscodefences = true
 summaryLength = 50
+enableGitInfo = true
 
 [params]
   sitename = "Vasil Radkov Yordanov"
@@ -34,3 +35,9 @@ summaryLength = 50
     name = "Projects"
     url = "/projects/"
     weight = 4
+
+[frontmatter]
+  date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+  expiryDate = ['expirydate', 'unpublishdate']
+  lastmod = [':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  publishDate = ['publishdate', 'pubdate', 'published', 'date']

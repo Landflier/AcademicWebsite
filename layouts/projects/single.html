@@ -39,7 +39,7 @@
             {{ end }}
             {{ if .Date }}
             <div class="meta-item">
-                <strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}
+                <strong>Date:</strong> {{ .Date | time.Format ":date_medium" }}
             </div>
             {{ end }}
         </div>

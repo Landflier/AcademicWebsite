@@ -22,14 +22,10 @@
             </div>
             
             <div class="project-meta blog-post-meta">
-                {{ if .Params.date }}
-                <span class="project-date blog-post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                {{ if .Lastmod }}
+                <div class="project-date blog-post-date">{{ .Lastmod | time.Format ":date_medium" }}</div>
                 {{ end }}
-                {{ if .Params.readTime }}
-                <span class="blog-read-time">{{ .Params.readTime }} min read</span>
-                {{ else }}
-                <span class="blog-read-time">{{ .ReadingTime }} min read</span>
-                {{ end }}
+                <div class="blog-read-time">{{ .ReadingTime }} min read</div>
             </div>
 
             {{ if .Params.image }}

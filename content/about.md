@@ -1,17 +1,17 @@
-+++
-title = "About Me"
-date = "2023-06-01"
-+++
+---
+title : "About Me"
+date : "2023-06-01"
+---
 
 # Vasil R Yordanov
 
-I am an academic researcher with interests in [your specific area]. My work focuses on [brief description of your research focus].
+I am an academic researcher with interests in Condensed Matter Physics, Lithography. I am also an RF IC design hobbyist.
 
 ## Education
 
-- PhD in [Field], [University], [Year]
-- MSc in [Field], [University], [Year]
-- BSc in [Field], [University], [Year]
+- MSc Semiconductors and Microelectronics, Purdue University, 2025
+- M1 Genral Physics, University Paris-Saclay, 2023
+- BSc Theoretical Physics, University of Glasgow, 2022
 
 ## Professional Experience
 
@@ -26,9 +26,8 @@ I am an academic researcher with interests in [your specific area]. My work focu
 - [Other relevant skills]
 
 ## Contact
+You can most easily reach me on LinkedIn or on Element
 
-- Email: [your email]
-- Office: [location]
-- [Social media/academic profiles]
-
-Feel free to [reach out](mailto:your-email@example.com) if you're interested in collaborating or have questions about my research. 
+- LinkedIn: [https://www.linkedin.com/in/vasil-r-yordanov/](https://www.linkedin.com/in/vasil-r-yordanov/)
+- Element/Matrix (FOSSi server): [@vasil_yordanov:fossi-chat.org](https://matrix.to/#/@vasil_yordanov:fossi-chat.org) 
+- Email: vyordano [at] purdue [dot] edu

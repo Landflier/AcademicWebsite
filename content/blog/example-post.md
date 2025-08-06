@@ -1,7 +1,7 @@
 ---
 title : "Example Blog Post"
 date : "2023-06-01"
-tags : ["example", "blog"]
+# tags : ["example", "blog"]
 author : "Vasil R Yordanov"
 type : "blog"
 ---

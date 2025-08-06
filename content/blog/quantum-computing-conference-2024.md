@@ -1,9 +1,9 @@
 ---
 title : "Reflections on Quantum Computing Conference 2024"
 date : "2024-12-21"
-tags : ["quantum computing", "conference", "algorithms", "hardware", "research"]
+# tags : ["quantum computing", "conference", "algorithms", "hardware", "research"]
 author : "Vasil R Yordanov"
-readTime : "7"
+# readTime : "7"
 type : "blog"
 ---
 

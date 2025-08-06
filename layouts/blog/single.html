@@ -7,9 +7,9 @@
         {{ end }}
         
         <div class="project-meta blog-post-meta">
-            {{ if .Date }}
+            {{ if .Lastmod }}
             <div class="meta-item">
-                <strong>Published:</strong> {{ .Date.Format "January 2, 2006" }}
+                <strong>Last Modified:</strong> {{ .Lastmod | time.Format ":date_medium" }}
             </div>
             {{ end }}
             {{ if .Params.readTime }}
