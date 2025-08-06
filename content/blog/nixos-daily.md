@@ -1,6 +1,5 @@
 ---
-title : "Example Blog Post"
-date : "2023-06-01"
+title : "Why I use NixOS as my daily driver"
 # tags : ["example", "blog"]
 author : "Vasil R Yordanov"
 type : "blog"

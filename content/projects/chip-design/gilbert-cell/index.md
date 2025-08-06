@@ -15,29 +15,79 @@ type: "projects"
 
 This project involves the design and implementation of a Gilbert cell mixer for RF applications as part of the 2025 Chipathon organized by the IEEE Solid-State Circuits Society (SSCS). The work encompasses RF circuit design, layout implementation, verification, and comprehensive performance characterization using the GF180MCU process technology.
 
-## Objectives
 
-- Design a high-performance Gilbert cell mixer for RF frequency conversion
-- Implement the design using the GF180MCU PDK and industry-standard EDA tools
-- Perform comprehensive verification including DRC, LVS, and RF performance analysis
-- Optimize the design for gain, linearity, and noise performance
-- Participate in the IEEE SSCS Chipathon initiative and document the complete design methodology
-
-## Methodology
-
-### Circuit Design
+## Circuit Design
 The Gilbert cell mixer was designed using Cadence Virtuoso, focusing on:
 - **Architecture selection**: Classic Gilbert cell topology for balanced mixing
 - **Transistor sizing**: Optimized for conversion gain and linearity
 - **Bias network design**: Stable current sources and voltage references
 - **RF matching**: Input/output impedance matching for 50Ω systems
 
-### Layout Implementation
+### Gilbert cell
+- **Transistor sizing**
+For the tranisistor sizing, we chose to use the gm/ID methodology. The RF
+transistors were selected to operate in moderate inverison with gm/ID=12, since
+this is the transconductance stage, and moderate inversion gives a good
+tradeoff between area, speed and gain [1-3].The switching LO transistors were
+selected to operate more towards the linear triode region, but still in
+moderate inversion, with a gm/Id=15. Higher gm/ID was avoided in order to avoid
+having too big devices and sacrifacing some of the transistor's ft (although
+the frequency response is a smaller issue, since we are working in the FM
+broadcasting band). For the sizing, a jupyter notebook was used [https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Gilbert_cell.ipynb]. The gm/ID calculation vs the simulation results are given in the table below:
+
+| Source | Transistor Type | gm/ID | gm (S) | ID (A) | jd (A/μm²) | W (μm) | ft (GHz) |
+|--------|----------------|-------|--------|--------|------------|--------|----------|
+| Calculation | RF Transistors | 12 | 6.00×10⁻⁴ | 5.00×10⁻⁵ | 4.30×10⁻⁶ | 11.64 | 7.68 |
+| Calculation | LO Transistors | 15 | 3.75×10⁻⁴ | 5.00×10⁻⁵ | 2.10×10⁻⁶ | 23.84 | 2.45 |
+| Simulation | RF Transistors | - | - | - | - | - | - |
+| Simulation | LO Transistors | - | - | - | - | - | - |  
+
+#### References
+
+[1] B. Boser, "OTA gm/Id Design," UC Berkeley EECS Department, 2011-12. [Online]. Available: https://people.eecs.berkeley.edu/~boser/presentations/2011-12%20OTA%20gm%20Id.pdf
+
+[2] "MOSFET Operation in Weak and Moderate Inversion," StudyLib. [Online]. Available: https://studylib.net/doc/18221859/mosfet-operation-in-weak-and-moderate-inversion
+
+[3] "Lecture Notes on Nanotransistors," Purdue University, edX Course Materials, 2021. [Online]. Available: https://courses.edx.org/asset-v1:PurdueX+69504x+1T2021+type@asset+block@LNS_Lecture_Notes_on_Nanotransistors.final.pdf
+
+### Biasing network
+
+## Layout Implementation
 The physical layout was implemented following RF design principles:
 - **Floorplanning**: Symmetrical layout for balanced operation
 - **RF routing**: Minimized parasitics and maintained signal integrity
 - **Ground plane**: Solid ground plane for low-noise performance
 - **Design rule compliance**: Adherence to GF180MCU PDK design rules
+
+### Gilbert cell
+For the Gilbert mixer, matching in the RF diff pair and 
+
+Some tidbits and pictures on transistor layout matching:
+
+1. Dummy transistors
+
+2. Interdigited design
+Current flows laterally across a CMOS (i.e from a typical Manhattan layout, right-to-left or left-to-right). These two orientations might have different mobilities, for example due to 'tilted implants' from the ion implantation, which is done at an angle.  There are other sources of orientation mismatch, such as litho misalignment (drain and source could be defined with different layers on the photomask level). 
+
+![Figure 13.57 from [1], example of interdigited design. This design can be labeled as dAsBdBsAD ](/images/projects/gilbert_cell/interdigited_design.png)
+
+![Figure 13.58 from [1], illustration of the 'tilted implants'. ](/images/projects/gilbert_cell/tilted_implant.png)
+
+3. Common centroid design
+![Table 13.2 from [1], the 5 rules for common-centroid layout](/images/projects/gilbert_cell/common_centroid_rules.png)
+
+
+![Table 13.3 from [1], examples of interdigited common-centroid layout patterns of common-source devices. Brackets denote a pattern which can be repeated a number of times, given by the superscript. Dashes denote places where S-D cannot be merged](/images/projects/gilbert_cell/common_centroid_examples.png)
+
+4. More esoteric matchings (withing +-1mV and +-1& current)
+Refer to [2]- autozeroing and chopper stabilization (not used in this project). 
+
+#### References:
+[1] Hastings, A. (n.d.). The art of analog layout. Pearson Higher Education US 
+[2] 74 C. C. Enz and G. C. Temes, “Circuit techniques for reducing the effects of op-amp imperfections: autozeroing, correlated double sampling, and chopper stabilization,” Proc. IEEE, Vol. 84, #11, 1996, pp. 1584–1614
+[3] https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
+
+### Biasing network
 
 ### Verification & Analysis
 Comprehensive verification was performed including:
