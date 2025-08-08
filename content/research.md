@@ -1,9 +1,11 @@
 ---
-title : "Research"
+title: "Research"
+date: 2024-12-21
+type: "research"
+layout: "single"
 ---
 
-# Rese
-## Curr
+## Past research
 ### [Project Title 1]
 
 [Brief description of the project, its goals, and significance]

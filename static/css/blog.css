@@ -1,0 +1,123 @@
+/* Blog-specific styling extensions */
+
+/* Blog Layout Classes - These inherit base styles from projects.css */
+.blog-container {
+    /* Inherits all projects-container styles */
+}
+
+.blog-header {
+    /* Inherits all projects-header styles */
+}
+
+.blog-intro {
+    /* Inherits all projects-intro styles */
+}
+
+.blog-grid {
+    /* Inherits all projects-grid styles */
+}
+
+.blog-card {
+    /* Inherits all project-card styles */
+}
+
+.blog-single {
+    /* Inherits all project-single styles */
+}
+
+.blog-content {
+    /* Inherits all project-content styles */
+}
+
+.blog-navigation {
+    /* Inherits all project-navigation styles */
+}
+
+/* Blog-specific UI Components */
+.blog-post-meta .blog-read-time {
+    background: #f0f9ff;
+    color: #075985;
+    border-color: #bae6fd;
+}
+
+.blog-tag {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #fde68a;
+}
+
+.blog-read-more {
+    background: #f0f9ff;
+    color: #3f1233;
+    border-color: #bae6fd;
+}
+
+.blog-read-more:hover {
+    background: #075985;
+    color: #fff;
+}
+
+/* Blog Content Typography */
+.blog-content h3 {
+    color: #2c5282;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4299e1;
+    position: relative;
+}
+
+.blog-content h4 {
+    color: #8a25a3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 0.8rem 0;
+    padding-bottom: 0.3rem;
+    position: relative;
+}
+
+/* Blog Content Tables */
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.blog-content table th {
+    background: #2c5282;
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #4299e1;
+}
+
+.blog-content table th:last-child {
+    border-right: none;
+}
+
+.blog-content table td {
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #f7fafc;
+}
+
+.blog-content table td:last-child {
+    border-right: none;
+}
+
+.blog-content table tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+.blog-content table tr:hover {
+    background: #edf2f7;
+    transition: background-color 0.2s ease;
+}
