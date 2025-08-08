@@ -1,0 +1,29 @@
+{{- $gap := .Get "gap" | default "15px" -}}
+{{- $class := .Get "class" | default "" -}}
+
+<div class="side-by-side {{ $class }}" style="display: flex; gap: {{ $gap }}; margin: 20px 0; flex-wrap: wrap;">
+  {{ .Inner }}
+</div>
+
+<style>
+.side-by-side .hugo-image {
+  flex: 1;
+  min-width: 45%;
+  margin: 0;
+}
+
+.side-by-side .hugo-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .side-by-side {
+    flex-direction: column;
+  }
+  
+  .side-by-side .hugo-image {
+    min-width: 100%;
+  }
+}
+</style>

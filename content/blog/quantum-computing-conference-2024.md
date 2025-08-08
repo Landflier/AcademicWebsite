@@ -5,6 +5,7 @@ date : "2024-12-21"
 author : "Vasil R Yordanov"
 # readTime : "7"
 type : "blog"
+draft : "true"
 ---
 
 # Quantum Computing Conference 2024: A Journey Through the Quantum Frontier

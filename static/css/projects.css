@@ -2,10 +2,17 @@
 
 /* Projects List Page */
 .projects-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 1rem 2rem 2rem 2rem;
+}
 
+/* Even wider on very large screens */
+@media (min-width: 1600px) {
+    .projects-container,
+    .project-single {
+        max-width: 1400px;
+    }
 }
 
 .projects-header {
@@ -496,4 +503,137 @@
 
 .blog-navigation {
     /* Inherits all project-navigation styles */
+}
+
+/* Custom heading styles for project content */
+.project-content h3 {
+    color: #2c5282;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+
+.project-content h4 {
+    color: #8a25a3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 0.8rem 0;
+    padding-bottom: 0.3rem;
+    position: relative;
+}
+
+
+
+/* Table styling for project content */
+.project-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.project-content table th {
+    background: #2c5282;
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #4299e1;
+}
+
+.project-content table th:last-child {
+    border-right: none;
+}
+
+.project-content table td {
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #f7fafc;
+}
+
+.project-content table td:last-child {
+    border-right: none;
+}
+
+.project-content table tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+.project-content table tr:hover {
+    background: #edf2f7;
+    transition: background-color 0.2s ease;
+}
+
+/* Also apply to blog content */
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.blog-content table th {
+    background: #2c5282;
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #4299e1;
+}
+
+.blog-content table th:last-child {
+    border-right: none;
+}
+
+.blog-content table td {
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #f7fafc;
+}
+
+.blog-content table td:last-child {
+    border-right: none;
+}
+
+.blog-content table tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+.blog-content table tr:hover {
+    background: #edf2f7;
+    transition: background-color 0.2s ease;
+}
+
+/* Also apply to blog content */
+.blog-content h3 {
+    color: #2c5282;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4299e1;
+    position: relative;
+}
+
+
+.blog-content h4 {
+    color: #8a25a3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 0.8rem 0;
+    padding-bottom: 0.3rem;
+    position: relative;
 }

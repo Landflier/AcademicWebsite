@@ -1,0 +1,202 @@
+{{- $youtube := .Get "youtube" -}}
+{{- $local := .Get "local" -}}
+{{- $archive := .Get "archive" -}}
+{{- $title := .Get "title" | default "Video" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "400px" -}}
+{{- $description := .Get "description" -}}
+{{- $fallback_message := .Get "fallback_message" | default "Video unavailable. Please check alternative sources." -}}
+
+<div class="video-container" style="margin: 20px 0;">
+  {{- if $description -}}
+  <p class="video-description" style="margin-bottom: 10px; font-style: italic;">{{ $description }}</p>
+  {{- end -}}
+  
+  <div class="video-wrapper" style="position: relative; width: {{ $width }}; margin: 0 auto;">
+    {{- if $youtube -}}
+    <!-- Primary: YouTube Embed -->
+    <div class="video-primary" id="video-primary-{{ $youtube }}">
+      <iframe 
+        width="100%" 
+        height="{{ $height }}"
+        src="https://www.youtube-nocookie.com/embed/{{ $youtube }}?rel=0&modestbranding=1" 
+        title="{{ $title }}"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        loading="lazy"
+        onerror="handleVideoError('{{ $youtube }}')">
+      </iframe>
+    </div>
+    {{- end -}}
+
+    {{- if or $local $archive -}}
+    <!-- Fallback options -->
+    <div class="video-fallback" id="video-fallback-{{ $youtube }}" style="display: none;">
+      {{- if $local -}}
+      <video 
+        width="100%" 
+        height="{{ $height }}"
+        controls 
+        preload="metadata"
+        style="background: #000;">
+        <source src="{{ $local }}" type="video/mp4">
+        {{- if $archive -}}
+        <p>Your browser doesn't support HTML5 video. <a href="{{ $archive }}" target="_blank" rel="noopener">View on Internet Archive</a></p>
+        {{- else -}}
+        <p>Your browser doesn't support HTML5 video.</p>
+        {{- end -}}
+      </video>
+      {{- else if $archive -}}
+      <iframe 
+        src="{{ $archive }}"
+        width="100%" 
+        height="{{ $height }}"
+        frameborder="0" 
+        webkitallowfullscreen="true" 
+        mozallowfullscreen="true" 
+        allowfullscreen>
+      </iframe>
+      {{- end -}}
+    </div>
+    {{- end -}}
+
+    {{- if not (or $local $archive) -}}
+    <!-- No fallback available -->
+    <div class="video-error" id="video-error-{{ $youtube }}" style="display: none; padding: 20px; background: #f5f5f5; border: 1px solid #ddd; text-align: center;">
+      <p>{{ $fallback_message }}</p>
+      {{- if $youtube -}}
+      <p><a href="https://www.youtube.com/watch?v={{ $youtube }}" target="_blank" rel="noopener">Try viewing directly on YouTube</a></p>
+      {{- end -}}
+    </div>
+    {{- end -}}
+  </div>
+
+  {{- if and $youtube (or $local $archive) -}}
+  <!-- Alternative sources links -->
+  <div class="video-sources" style="margin-top: 10px; font-size: 0.9em; color: #666;">
+    <strong>Alternative sources:</strong>
+    {{- if $local -}}
+    <a href="{{ $local }}" style="margin-left: 10px;" download>Download Local Copy</a>
+    {{- end -}}
+    {{- if $archive -}}
+    <a href="{{ $archive }}" target="_blank" rel="noopener" style="margin-left: 10px;">Internet Archive</a>
+    {{- end -}}
+    <a href="https://www.youtube.com/watch?v={{ $youtube }}" target="_blank" rel="noopener" style="margin-left: 10px;">YouTube</a>
+  </div>
+  {{- end -}}
+</div>
+
+{{- if $youtube -}}
+<script>
+function handleVideoError(videoId) {
+  console.log('YouTube video failed to load:', videoId);
+  document.getElementById('video-primary-' + videoId).style.display = 'none';
+  
+  const fallback = document.getElementById('video-fallback-' + videoId);
+  const error = document.getElementById('video-error-' + videoId);
+  
+  if (fallback) {
+    fallback.style.display = 'block';
+    console.log('Showing fallback video for:', videoId);
+  } else if (error) {
+    error.style.display = 'block';
+    console.log('Showing error message for:', videoId);
+  }
+}
+
+// Check if YouTube iframe loads successfully
+document.addEventListener('DOMContentLoaded', function() {
+  const iframe = document.querySelector('#video-primary-{{ $youtube }} iframe');
+  if (iframe) {
+    // Listen for load event
+    iframe.addEventListener('load', function() {
+      // Check for embedding restrictions after a short delay
+      setTimeout(function() {
+        try {
+          // Try to detect if the iframe content shows embedding disabled message
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+          if (iframeDoc) {
+            const bodyText = iframeDoc.body?.textContent || '';
+            if (bodyText.includes('Playback on other websites has been disabled') ||
+                bodyText.includes('Video unavailable') ||
+                bodyText.includes('Watch on YouTube')) {
+              console.log('YouTube embedding disabled detected');
+              handleVideoError('{{ $youtube }}');
+            }
+          }
+        } catch (e) {
+          // Cross-origin restrictions prevent access - this is normal
+          console.log('Cannot access iframe content (normal for YouTube embeds)');
+        }
+      }, 3000); // Check after 3 seconds
+    });
+    
+    iframe.addEventListener('error', function() {
+      handleVideoError('{{ $youtube }}');
+    });
+    
+    // Timeout fallback (if iframe doesn't load within 15 seconds)
+    setTimeout(function() {
+      if (iframe.style.display !== 'none' && iframe.contentDocument === null) {
+        try {
+          // Try to access iframe content to test if it loaded
+          iframe.contentWindow.location.href;
+        } catch (e) {
+          // If we can't access it, assume it failed to load
+          console.log('YouTube iframe access failed, assuming blocked');
+          handleVideoError('{{ $youtube }}');
+        }
+      }
+    }, 15000);
+  }
+});
+</script>
+{{- end -}}
+
+<style>
+.video-container .video-wrapper {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+  border-radius: 8px;
+}
+
+.video-sources a {
+  text-decoration: none;
+  color: #0066cc;
+  padding: 2px 8px;
+  border: 1px solid #0066cc;
+  border-radius: 3px;
+  font-size: 0.8em;
+  transition: background-color 0.2s;
+}
+
+.video-sources a:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    margin: 15px 0;
+  }
+  
+  .video-wrapper {
+    width: 100% !important;
+  }
+  
+  .video-sources {
+    text-align: center;
+  }
+  
+  .video-sources a {
+    display: inline-block;
+    margin: 2px !important;
+  }
+}
+</style>

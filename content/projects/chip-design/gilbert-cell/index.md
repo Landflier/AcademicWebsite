@@ -1,8 +1,6 @@
 ---
 title: "Gilbert Cell Mixer Design"
 subtitle: "RF Analog Circuit Design using GF180MCU Technology"
-date: 2025-06-30
-event: "2025 Chipathon - IEEE SSCS PICO Initiative"
 technologies: ["Xschem", "Magic-VLSI", "CACE", "GLayout", "GF180MCU PDK", "Python", "RF Design"]
 image: "/images/projects/gilbert-mixer-layout.png"
 description: "Design and implementation of a Gilbert cell mixer for RF applications using the GF180MCU process, including full layout, verification, and performance characterization."
@@ -15,6 +13,8 @@ type: "projects"
 
 This project involves the design and implementation of a Gilbert cell mixer for RF applications as part of the 2025 Chipathon organized by the IEEE Solid-State Circuits Society (SSCS). The work encompasses RF circuit design, layout implementation, verification, and comprehensive performance characterization using the GF180MCU process technology.
 
+#### References
+https://www.rfcafe.com/references/articles/wj-tech-notes/mixers-characteristics-performance-p1.pdf
 
 ## Circuit Design
 The Gilbert cell mixer was designed using Cadence Virtuoso, focusing on:
@@ -24,7 +24,7 @@ The Gilbert cell mixer was designed using Cadence Virtuoso, focusing on:
 - **RF matching**: Input/output impedance matching for 50Ω systems
 
 ### Gilbert cell
-- **Transistor sizing**
+#### Transistor sizing
 For the tranisistor sizing, we chose to use the gm/ID methodology. The RF
 transistors were selected to operate in moderate inverison with gm/ID=12, since
 this is the transconductance stage, and moderate inversion gives a good
@@ -35,12 +35,25 @@ having too big devices and sacrifacing some of the transistor's ft (although
 the frequency response is a smaller issue, since we are working in the FM
 broadcasting band). For the sizing, a jupyter notebook was used [https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Gilbert_cell.ipynb]. The gm/ID calculation vs the simulation results are given in the table below:
 
-| Source | Transistor Type | gm/ID | gm (S) | ID (A) | jd (A/μm²) | W (μm) | ft (GHz) |
-|--------|----------------|-------|--------|--------|------------|--------|----------|
-| Calculation | RF Transistors | 12 | 6.00×10⁻⁴ | 5.00×10⁻⁵ | 4.30×10⁻⁶ | 11.64 | 7.68 |
-| Calculation | LO Transistors | 15 | 3.75×10⁻⁴ | 5.00×10⁻⁵ | 2.10×10⁻⁶ | 23.84 | 2.45 |
-| Simulation | RF Transistors | - | - | - | - | - | - |
-| Simulation | LO Transistors | - | - | - | - | - | - |  
+| Source | Transistor | gm/ID | gm(mS) | ID(uA) | jd(uA/μm²) | W(μm) | ft(GHz) | VGS(V) | VDS(V) |
+|--------|---------|:------:|:--------:|:--------:|:----------:|:------:|:--------:|:------:|:------:|
+| Calculation (nf=1) | RF | 12 | 0.600 | 50 | 4.30 | 11.64 | 7.68 | - | 1.65 |
+| Calculation (nf=6) | RF | 12 | 0.600 | 50 | 4.80 | 10.38 | 14.34* | - | 1.65 |
+| Calculation (nf=1) | LO | 15 | 0.375 | 25 | 2.10 | 23.84 | 2.45 | - | 1.65 |
+| Calculation (nf=6) | LO | 15 | 0.375 | 25 | 2.43 | 20.57 | 5.28* | - | 1.65 |
+| Simulation | RF | 11 | 0.55 | 50 | - | 10 (nf=5) | - | 0.83 | 0.39 |
+| Simulation | LO | 16 | 0.42 | 25 | - | 20 (nf=5) | - | 0.82 | 2.23 |  
+
+
+Note the calculation results depend on the 'nf' that was used in the simulations of the single device .mat files. The models which are to be used for these simulations are a bit different from the ones provided by the foundry - the correct ones are provided by B Murman on this github repo: [https://github.com/bmurmann/Chipathon2025/tree/main/models_updated_2025.07.19/ngspice].
+
+* These values shouldn't be trusted, since 'cgso' and 'cgdo' .op values were zero in the simulation. This means the capacitances of the G,D and S terminals are off.
+#### Notes to self
+
+- **Problem**
+Although the circuit is working, I am still having trouble understanding the regions of operation of the MOSFETs. For the LO devices, they should be operating as switches, however they are also hogging the entire voltage headroom. I.e VDS~2.5V for the LOs, and for the RF devices, VDS~0.1-0.3 (depending on what part of the LO cycling the transistor is in). Thus, aren't the RF FETs operating in the triode region? For both the LO and RF transistors, VGS>Vth, but for the LO VDS>VGS-Vth (i.e transistor is in saturation), but for the RF, VDS is less than VGS-Vth (i.e linear, triode region).
+- **Solution**:
+Could it that the the transistors are not biased correctly? To reproduce the problem the waveforms used are V_CM_rf = 1.2V, V_amp_rf=0.2V, V_CM_lo=1.2V, V_amp_lo=0.2V. Try increasing V_CM_lo, to bias the LO transistors further into saturation, forcing the VDS_lo drop to be higher across the LO transistors (so that the load network formed by the two resistors does not hog all the voltage)
 
 #### References
 
@@ -83,9 +96,12 @@ Current flows laterally across a CMOS (i.e from a typical Manhattan layout, righ
 Refer to [2]- autozeroing and chopper stabilization (not used in this project). 
 
 #### References:
-[1] Hastings, A. (n.d.). The art of analog layout. Pearson Higher Education US 
-[2] 74 C. C. Enz and G. C. Temes, “Circuit techniques for reducing the effects of op-amp imperfections: autozeroing, correlated double sampling, and chopper stabilization,” Proc. IEEE, Vol. 84, #11, 1996, pp. 1584–1614
-[3] https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
+
+[1] A. Hastings, *The Art of Analog Layout*, 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2006.
+
+[2] C. C. Enz and G. C. Temes, "Circuit techniques for reducing the effects of op-amp imperfections: autozeroing, correlated double sampling, and chopper stabilization," *Proc. IEEE*, vol. 84, no. 11, pp. 1584-1614, Nov. 1996.
+
+[3] "Optimizing Analog Layouts: Techniques for Effective Layout Matching," Design & Reuse. [Online]. Available: https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
 
 ### Biasing network
 
@@ -100,9 +116,9 @@ Comprehensive verification was performed including:
 ## Results
 
 ### Performance Metrics
-- **RF frequency**: 2.4 GHz
-- **LO frequency**: 2.3 GHz
-- **IF frequency**: 100 MHz
+- **RF frequency**: 89.3 MHz
+- **LO frequency**: 100 MHz
+- **IF frequency**: 10.7 MHz
 - **Conversion gain**: 12 dB
 - **Input P1dB**: -8 dBm
 - **IIP3**: +2 dBm
@@ -134,19 +150,24 @@ Achieving target performance required:
 - Noise optimization through proper device selection
 
 ## Tools and Technologies
-
-- **Cadence Virtuoso**: Schematic capture and RF simulation
-- **Spectre RF**: Advanced RF circuit simulation
+- **Magic VLSI**: Open-source VLSI layout editor with advanced DRC/LVS capabilities. [Documentation](http://opencircuitdesign.com/magic/)
+- **GLayout**: Python-based parametric layout generator for analog circuits. [Documentation](https://github.com/niftylab/laygo2)
+- **CACE**: Circuit Automatic Characterization Engine for analog and mixed-signal circuit characterization. [Documentation](https://github.com/efabless/cace)
+- **Xschem and Ngspice**: Open-source schematic capture and SPICE circuit simulator for analog design verification. [Xschem Documentation](https://xschem.sourceforge.io/stefan/index.html) 
 - **GF180MCU PDK**: GlobalFoundries 180nm process design kit
 - **Python**: Custom analysis scripts and data processing
-- **MATLAB**: Signal processing and performance analysis
 
-## Future Work
+### Reference websites:
+[https://raw.githubusercontent.com/hpretl/iic-osic/main/magic-cheatsheet/magic_cheatsheet.pdf] - keybind cheatsheet for MagicVLSI
 
-- Integration with complete RF receiver system
-- Multi-band mixer design for software-defined radio
-- Advanced calibration techniques for process variations
-- Fabrication through the Chipathon program and measurement validation
+### Some confusions
+During the design, there were some things which caused me some confusions. I have decided to list these here to remind myself in the future, and for anyone working with the open source tools.
+
+1. For a MOSFET device in the PDK, 'nf' in MagicVLSI and 'nf' in Xschem are completely different. Example: a device with W=2um, nf=2 in Magic will have width=W*nf=4um; the same device will have width=W=2um in xschem, with per-finger length of W/nf=1um. Steffan Schippers (the maintainer of Xschem), has even included devices which specify W as the per-finger width:
+https://web.open-source-silicon.dev/t/16920148/in-xschem-when-using-such-a-symbol-the-nf-one-and-then-havin
+
+
+
 
 ## Chipathon 2025 Initiative
 
@@ -158,7 +179,32 @@ This project is part of the IEEE SSCS Chipathon 2025, an initiative to promote h
 
 ## Acknowledgments
 
-Grateful acknowledgment to the IEEE Solid-State Circuits Society for organizing the Chipathon initiative, GlobalFoundries for providing the GF180MCU PDK access, and the broader IC design community for their support and collaboration.
+Grateful acknowledgment to the IEEE Solid-State Circuits Society for organizing the Chipathon initiative, GlobalFoundries for providing the GF180MCU PDK access, and the broader IC design community and FOSSi organization for their support and collaboration.
+4. Razavi, B. "RF Microelectronics." 2nd Edition, Prentice Hall.
+
+## Additional Resources
+### Educational Video
+
+Video explaining and testing a descretely implemented Gilbert mixer.
+{{< video 
+    youtube="7nmmb0pqTU0"
+    title="Gilbert mixer explained"
+    width="100%"
+    height="450px" >}}
+
+{{< video 
+    youtube="uiTrCUNRUIA"
+    title="Related Circuit Design Concepts"
+    description="History and reasons behind implementing a mixer in RF systems."
+    width="100%"
+    height="450px" >}}
+
+{{< video 
+    youtube="DUXTZxMZDsg"
+    title="Related Circuit Design Concepts"
+    description="A very nice instructionon the measurement of IIP3 near the end of the video"
+    width="100%"
+    height="450px" >}}
 
 ## References
 

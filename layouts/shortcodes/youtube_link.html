@@ -1,0 +1,64 @@
+{{- $youtube := .Get "youtube" -}}
+{{- $title := .Get "title" | default "YouTube Video" -}}
+{{- $description := .Get "description" -}}
+{{- $thumbnail := .Get "thumbnail" | default "true" -}}
+
+<div class="youtube-link-container" style="margin: 20px 0; padding: 20px; border: 2px solid #ff0000; border-radius: 8px; background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);">
+  {{- if $description -}}
+  <p class="video-description" style="margin-bottom: 15px; font-style: italic; color: #666;">{{ $description }}</p>
+  {{- end -}}
+  
+  <div class="youtube-link-content" style="display: flex; align-items: center; gap: 15px;">
+    {{- if eq $thumbnail "true" -}}
+    <div class="youtube-thumbnail" style="flex-shrink: 0;">
+      <img src="https://img.youtube.com/vi/{{ $youtube }}/mqdefault.jpg" 
+           alt="{{ $title }} thumbnail"
+           style="width: 120px; height: 90px; border-radius: 4px; object-fit: cover;">
+    </div>
+    {{- end -}}
+    
+    <div class="youtube-link-info" style="flex: 1;">
+      <h4 style="margin: 0 0 8px 0; color: #333;">
+        <a href="https://www.youtube.com/watch?v={{ $youtube }}" 
+           target="_blank" 
+           rel="noopener"
+           style="text-decoration: none; color: #ff0000; display: flex; align-items: center; gap: 8px;">
+          📺 {{ $title }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+          </svg>
+        </a>
+      </h4>
+      <p style="margin: 0; font-size: 0.9em; color: #666;">
+        Click to watch on YouTube
+      </p>
+      <p style="margin: 4px 0 0 0; font-size: 0.8em; color: #999;">
+        ⚠️ This video has embedding disabled by the creator
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+.youtube-link-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+.youtube-link-container a:hover {
+  color: #cc0000 !important;
+}
+
+@media (max-width: 768px) {
+  .youtube-link-content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  
+  .youtube-thumbnail img {
+    width: 100px !important;
+    height: 75px !important;
+  }
+}
+</style>

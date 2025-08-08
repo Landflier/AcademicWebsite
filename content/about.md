@@ -1,11 +1,8 @@
 ---
 title : "About Me"
-date : "2023-06-01"
 ---
 
-# Vasil R Yordanov
-
-I am an academic researcher with interests in Condensed Matter Physics, Lithography. I am also an RF IC design hobbyist.
+Welcome to my person website. IN university I studied Physics, currently I am interested in Condensed Matter Physics, and I am part of the open-source community. I am developing my radio hobby by building integrated circuits, and experimenting with testing equipment.
 
 ## Education
 
@@ -13,17 +10,6 @@ I am an academic researcher with interests in Condensed Matter Physics, Lithogra
 - M1 Genral Physics, University Paris-Saclay, 2023
 - BSc Theoretical Physics, University of Glasgow, 2022
 
-## Professional Experience
-
-- [Position], [Institution], [Year-range]
-- [Position], [Institution], [Year-range]
-
-## Skills
-
-- [Technical skill]
-- [Research method]
-- [Programming languages]
-- [Other relevant skills]
 
 ## Contact
 You can most easily reach me on LinkedIn or on Element
