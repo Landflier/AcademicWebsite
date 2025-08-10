@@ -22,17 +22,8 @@
             </div>
             
             <div class="project-meta">
-                {{ if .Params.event }}
-                <span class="project-event">{{ .Params.event }}</span>
-                {{ end }}
                 {{ if .Params.project_type }}
                 <span class="project-type">{{ .Params.project_type }}</span>
-                {{ end }}
-                {{ if .Params.course }}
-                <span class="project-course">{{ .Params.course }}</span>
-                {{ end }}
-                {{ if .Params.semester }}
-                <span class="project-semester">{{ .Params.semester }}</span>
                 {{ end }}
                 {{ if .Params.date }}
                 <span class="project-date">{{ .Date.Format "January 2006" }}</span>

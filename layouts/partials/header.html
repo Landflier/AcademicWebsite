@@ -27,7 +27,11 @@
     
     <!-- Additional CSS for specific page types -->
     {{ if eq .Type "projects" }}
-    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="{{ "/css/projects.css" | relURL }}">
+    {{ end }}
+    
+    {{ if eq .Type "blog" }}
+    <link rel="stylesheet" href="{{ "/css/blog.css" | relURL }}">
     {{ end }}
 
     {{ range .AlternativeOutputFormats -}}
