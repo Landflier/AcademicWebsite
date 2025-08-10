@@ -9,21 +9,49 @@ presentation: "https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/doc
 type: "projects"
 ---
 
-## Project Overview
+
+## Introduction and Project Overview
 
 This project involves the design and implementation of a Gilbert cell mixer for RF applications as part of the 2025 Chipathon organized by the IEEE Solid-State Circuits Society (SSCS). The work encompasses RF circuit design, layout implementation, verification, and comprehensive performance characterization using the GF180MCU process technology.
+
+### Theory 
+The Gilbert cell is a type of mixer, utilizing three differential pairs. The mathematical operation of a mixer is to multiply the two input signals (RF and LO). Supposing that the two singals are sine waves with the following shape:
+
+$$
+\begin{gathered}
+v_{R F}=A(t) \cos \left(\omega_{RF} t+\phi(t)\right) \\
+v_{LO}=A_{LO} \cos \left(\omega_{LO} t\right)
+\end{gathered}
+$$
+
+the mixer will produce the following output:
+
+$$
+\begin{aligned}
+v_{\text {out }}= & v_{R F} \times v_{LO} \\
+= & \frac{A(t) A_{LO}}{2}\left\{\cos \phi\left(\cos \left(\omega_{LO}+\omega_{RF}\right) t+\cos \left(\omega_{LO}-\omega_{RF}\right) t\right)\right. \\
+& \left.-\sin \phi\left(\sin \left(\omega_{LO}+\omega_{RF}\right) t+\sin \left(\omega_{LO}-\omega_{RF}\right) t\right)\right\}
+=\frac{A(t) A_{LO}}{2} & \left\{\cos \left(\left(\omega_{LO}+\omega_{RF}\right) t+\phi(t)\right)+\right. \\
+& \left.\cos \left(\left(\omega_{LO}-\omega_{RF}\right) t+\phi(t)\right)\right\}
+\label{sec:introduction;eq:mixer_output}
+\end{aligned}
+$$
+
+In this derivation we have ignored the non-linearity of the mixer, thus omitting the higher order harmonics. These harmonics will become important when we discuss the linearity of the mixer. 
+
+As can be seen from \ref{sec:introduction;eq:mixer_output}, the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega{LO} \plusminus \omega{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms, thus:
+
+
 
 #### References
 https://www.rfcafe.com/references/articles/wj-tech-notes/mixers-characteristics-performance-p1.pdf
 
 ## Circuit Design
-The Gilbert cell mixer was designed using Cadence Virtuoso, focusing on:
-- **Architecture selection**: Classic Gilbert cell topology for balanced mixing
-- **Transistor sizing**: Optimized for conversion gain and linearity
-- **Bias network design**: Stable current sources and voltage references
-- **RF matching**: Input/output impedance matching for 50Ω systems
+In our workflow we used Xschem for creating the schematics, and a python notebook for gm/ID transistor sizing.
 
 ### Gilbert cell
+![Schematic of the Gilbert cell mixer, implemented in Xschem](/images/projects/gilbert_cell/interdigited_design.png)
+
 #### Transistor sizing
 For the tranisistor sizing, we chose to use the gm/ID methodology. The RF
 transistors were selected to operate in moderate inverison with gm/ID=12, since
@@ -64,6 +92,19 @@ Could it that the the transistors are not biased correctly? To reproduce the pro
 [3] "Lecture Notes on Nanotransistors," Purdue University, edX Course Materials, 2021. [Online]. Available: https://courses.edx.org/asset-v1:PurdueX+69504x+1T2021+type@asset+block@LNS_Lecture_Notes_on_Nanotransistors.final.pdf
 
 ### Biasing network
+For the biasing network, we decided to use an on-chip bandgap reference. This network provides the biasing currents of the Gilbert cell mixer.
+
+![Schematic of the biasing network, implemented in Xschem](/images/projects/gilbert_cell/interdigited_design.png)
+
+#### References
+
+[1] https://wiki.analog.com/university/courses/electronics/text/chapter-14
+
+### Matching network
+The LO and RF input networks of the Gilbert cell require an impedence matching network, in order to maximize power trasfer, but more importantly, to ensure that the input waveforms have as little distortion as possible from reflected waves. 
+
+
+![Schematic of the input matching network, implemented in Xschem](/images/projects/gilbert_cell/interdigited_design.png)
 
 ## Layout Implementation
 The physical layout was implemented following RF design principles:
@@ -104,14 +145,10 @@ Refer to [2]- autozeroing and chopper stabilization (not used in this project).
 [3] "Optimizing Analog Layouts: Techniques for Effective Layout Matching," Design & Reuse. [Online]. Available: https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
 
 ### Biasing network
+For the biasing network, we chose to use an on-chip bandgap reference. The circuit provides the current biases for the RF differential pair of the mixer
 
-### Verification & Analysis
-Comprehensive verification was performed including:
-- **Design Rule Check (DRC)**: Verified layout compliance with GF180MCU rules
-- **Layout vs. Schematic (LVS)**: Confirmed layout matches schematic netlist
-- **Parasitic extraction**: RF parasitic extraction including inductances
-- **RF simulation**: S-parameter analysis and harmonic distortion characterization
-- **Noise analysis**: Noise figure and signal-to-noise ratio optimization
+## Verification & Analysis
+
 
 ## Results
 
@@ -149,13 +186,6 @@ Achieving target performance required:
 - Load impedance tuning for maximum conversion gain
 - Noise optimization through proper device selection
 
-## Tools and Technologies
-- **Magic VLSI**: Open-source VLSI layout editor with advanced DRC/LVS capabilities. [Documentation](http://opencircuitdesign.com/magic/)
-- **GLayout**: Python-based parametric layout generator for analog circuits. [Documentation](https://github.com/niftylab/laygo2)
-- **CACE**: Circuit Automatic Characterization Engine for analog and mixed-signal circuit characterization. [Documentation](https://github.com/efabless/cace)
-- **Xschem and Ngspice**: Open-source schematic capture and SPICE circuit simulator for analog design verification. [Xschem Documentation](https://xschem.sourceforge.io/stefan/index.html) 
-- **GF180MCU PDK**: GlobalFoundries 180nm process design kit
-- **Python**: Custom analysis scripts and data processing
 
 ### Reference websites:
 [https://raw.githubusercontent.com/hpretl/iic-osic/main/magic-cheatsheet/magic_cheatsheet.pdf] - keybind cheatsheet for MagicVLSI
@@ -180,7 +210,14 @@ This project is part of the IEEE SSCS Chipathon 2025, an initiative to promote h
 ## Acknowledgments
 
 Grateful acknowledgment to the IEEE Solid-State Circuits Society for organizing the Chipathon initiative, GlobalFoundries for providing the GF180MCU PDK access, and the broader IC design community and FOSSi organization for their support and collaboration.
-4. Razavi, B. "RF Microelectronics." 2nd Edition, Prentice Hall.
+
+## Tools and Technologies
+- **Magic VLSI**: Open-source VLSI layout editor with advanced DRC/LVS capabilities. [Documentation](http://opencircuitdesign.com/magic/)
+- **GLayout**: Python-based parametric layout generator for analog circuits. [Documentation](https://github.com/niftylab/laygo2)
+- **CACE**: Circuit Automatic Characterization Engine for analog and mixed-signal circuit characterization. [Documentation](https://github.com/efabless/cace)
+- **Xschem and Ngspice**: Open-source schematic capture and SPICE circuit simulator for analog design verification. [Xschem Documentation](https://xschem.sourceforge.io/stefan/index.html) 
+- **GF180MCU PDK**: GlobalFoundries 180nm process design kit
+- **Python**: Custom analysis scripts and data processing
 
 ## Additional Resources
 ### Educational Video
@@ -205,10 +242,3 @@ Video explaining and testing a descretely implemented Gilbert mixer.
     description="A very nice instructionon the measurement of IIP3 near the end of the video"
     width="100%"
     height="450px" >}}
-
-## References
-
-1. GlobalFoundries. "GF180MCU Process Design Kit Documentation." 2024.
-2. IEEE SSCS. "Chipathon 2025 Design Guidelines and Specifications." 2024.
-3. Gilbert, B. "A Precise Four-Quadrant Multiplier with Subnanosecond Response." IEEE JSSC, 1968.
-4. Razavi, B. "RF Microelectronics." 2nd Edition, Prentice Hall.
