@@ -10,6 +10,21 @@ theme = "black-and-light"
 # pygmentsstyle       = "bw"
 pygmentscodefences  = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      passthrough = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.goldmark.extensions.passthrough]
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['$$', '$$'], ['\\[', '\\]']]
+      inline = [['$', '$'], ['\\(', '\\)']]
+
 [params]
   sitename = "Vasil Radkov Yordanov"
   disableWebFonts = false

@@ -18,28 +18,27 @@ This project involves the design and implementation of a Gilbert cell mixer for 
 The Gilbert cell is a type of mixer, utilizing three differential pairs. The mathematical operation of a mixer is to multiply the two input signals (RF and LO). Supposing that the two singals are sine waves with the following shape:
 
 $$
-\begin{gathered}
-v_{R F}=A(t) \cos \left(\omega_{RF} t+\phi(t)\right) \\
-v_{LO}=A_{LO} \cos \left(\omega_{LO} t\right)
-\end{gathered}
+\begin{align}
+& v_{RF}=A(t) \cos \left(\omega_{RF} t+\phi(t)\right) \nonumber \newline
+& v_{LO}=A_{LO} \cos \left(\omega_{LO} t\right) \nonumber \tag{1}
+\end{align}
 $$
 
 the mixer will produce the following output:
 
 $$
-\begin{aligned}
-v_{\text {out }}= & v_{R F} \times v_{LO} \\
-= & \frac{A(t) A_{LO}}{2}\left\{\cos \phi\left(\cos \left(\omega_{LO}+\omega_{RF}\right) t+\cos \left(\omega_{LO}-\omega_{RF}\right) t\right)\right. \\
-& \left.-\sin \phi\left(\sin \left(\omega_{LO}+\omega_{RF}\right) t+\sin \left(\omega_{LO}-\omega_{RF}\right) t\right)\right\}
-=\frac{A(t) A_{LO}}{2} & \left\{\cos \left(\left(\omega_{LO}+\omega_{RF}\right) t+\phi(t)\right)+\right. \\
-& \left.\cos \left(\left(\omega_{LO}-\omega_{RF}\right) t+\phi(t)\right)\right\}
-\label{sec:introduction;eq:mixer_output}
-\end{aligned}
+\begin{align}
+v_{\text{out}} &= v_{RF} \times v_{LO} \nonumber \newline
+&= \frac{A(t) A_{LO}}{2}\left[\cos \phi(t)\left(\cos \left(\omega_{LO}+\omega_{RF}\right) t+\cos \left(\omega_{LO}-\omega_{RF}\right) t\right)\right. \nonumber \newline
+& \left.\quad -\sin \phi(t)\left(\sin \left(\omega_{LO}+\omega_{RF}\right) t+\sin \left(\omega_{LO}-\omega_{RF}\right) t\right)\right] \nonumber \newline
+&= \frac{A(t) A_{LO}}{2} \left[\cos \left(\left(\omega_{LO}+\omega_{RF}\right) t+\phi(t)\right) \right. \nonumber \newline
+& \left.\quad +\cos \left(\left(\omega_{LO}-\omega_{RF}\right) t+\phi(t)\right)\right] \tag{2}
+\end{align}
 $$
 
 In this derivation we have ignored the non-linearity of the mixer, thus omitting the higher order harmonics. These harmonics will become important when we discuss the linearity of the mixer. 
 
-As can be seen from \ref{sec:introduction;eq:mixer_output}, the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega{LO} \plusminus \omega{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms, thus:
+As can be seen from equation (1), the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega_{LO} \pm \omega_{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms, thus:
 
 
 
