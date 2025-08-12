@@ -23,8 +23,8 @@
 }
 
 .projects-header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: bold;
     color: #333;
     margin-bottom: 1rem;
     letter-spacing: 1px;
@@ -133,6 +133,23 @@
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid #b2f5ea;
+}
+
+.project-team {
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.team-label {
+    color: #666;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.team-member {
+    color: #3bb64b;
+    font-weight: bold;
 }
 
 .project-links {
@@ -415,7 +432,8 @@
     
     .projects-header h1,
     .project-single .project-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
     
     .project-meta {
