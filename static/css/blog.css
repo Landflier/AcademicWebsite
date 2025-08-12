@@ -110,3 +110,39 @@
     background: #edf2f7;
     transition: background-color 0.2s ease;
 }
+
+/* Blog Content Images with Captions */
+.blog-content figure.content-image {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+.blog-content figure.content-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.blog-content figure.content-image figcaption {
+    margin-top: 0.75rem;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Legacy img styling for images without captions */
+.blog-content img:not(figure img) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
