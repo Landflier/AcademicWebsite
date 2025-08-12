@@ -181,10 +181,10 @@ The following testing equipment will be used to measure the mixer performance:
 
 The test setups for the different measurements are schematically shown in the figures below.
 
-![Conversion loss measurement setup. DBM stands for Double Balanced Mixer, the terminations are $10dB=50Ohm$. Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-004.ppm)
-![Two-tone third order distortion (IIP3). Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-003.ppm)
-![VSWR measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-002.ppm)
-![Isolation measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-001.ppm)
+![Conversion loss measurement setup. DBM stands for Double Balanced Mixer, the terminations are $10dB=50Ohm$. Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-004.svg)
+![Two-tone third order distortion (IIP3). Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-003.svg)
+![VSWR measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-002.svg)
+![Isolation measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-001.svg)
 
 #### References
 [1] https://www.test-and-measurement-world.com/measurements/rf/rf-mixer-testing

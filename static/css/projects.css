@@ -301,7 +301,34 @@
     margin-bottom: 0.5rem;
 }
 
-.project-content img {
+/* Figure styling for images with captions */
+.project-content figure.content-image {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+.project-content figure.content-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-content figure.content-image figcaption {
+    margin-top: 0.75rem;
+    font-style: italic;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Legacy img styling for images without captions */
+.project-content img:not(figure img) {
     max-width: 100%;
     height: auto;
     display: block;
