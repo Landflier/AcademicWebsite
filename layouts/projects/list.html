@@ -1,9 +1,9 @@
 {{ define "main" }}
-<div class="projects-container">
-    <header class="projects-header">
-        <h1>{{ .Title }}</h1>
+<div class="main-page-container">
+    <header class="main-page-header">
+        <h1 class="main-page-title">{{ .Title }}</h1>
         {{ if .Content }}
-        <div class="projects-intro">
+        <div class="main-page-intro">
             {{ .Content }}
         </div>
         {{ end }}
