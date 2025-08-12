@@ -2,6 +2,7 @@
 title: "Gilbert Cell Mixer Design"
 subtitle: "RF Analog Circuit Design using GF180MCU Technology"
 technologies: ["Xschem", "Magic-VLSI", "CACE", "GLayout", "GF180MCU PDK", "Python", "RF Design"]
+team_members: ["Shaikh Shoeb Dawood", "Vasil Yordanov"]
 image: "/images/projects/gilbert_cell/Gilbert_cell_icon.svg"
 description: "Design and implementation of a Gilbert cell mixer for RF applications using the GF180MCU process, including full layout, verification, and performance characterization."
 github: "https://github.com/Landflier/Chipathon_2025_gLayout"
@@ -170,39 +171,33 @@ Nelow are given waveforms for the output of the Gilbert mixer, in both the time 
 ### Top level
 
 ## Testing results
+### Testing equipement
+The following testing equipment will be used to measure the mixer performance:
+- Vector Network Analyzer (VNA) : Measures insertion loss, return loss, and isolation.
+- Spectrum Analyzer : Analyzes frequency response and spurious signals.
+- Signal Generators : Provides RF, LO, and IF signals for testing.
+- Power Meter : Measures power levels at different ports.
+- Noise Figure Analyzer : Evaluates noise characteristics of the mixer.
 
+The test setups for the different measurements are schematically shown in the figures below.
 
-### Key Achievements
-- Achieved target conversion gain with excellent linearity
-- Low noise figure suitable for receiver applications
-- Successful first-pass design with all specifications met
-- Balanced layout ensuring good common-mode rejection
-- Ready for fabrication through Chipathon initiative
+![Conversion loss measurement setup. DBM stands for Double Balanced Mixer, the terminations are $10dB=50Ohm$. Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-004.ppm)
+![Two-tone third order distortion (IIP3). Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-003.ppm)
+![VSWR measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-002.ppm)
+![Isolation measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-001.ppm)
 
-## Technical Challenges
+#### References
+[1] https://www.test-and-measurement-world.com/measurements/rf/rf-mixer-testing
+[2] https://www.minicircuits.com/applications/application_notes.html
+[3] https://www.minicircuits.com/appdoc/AN00-009.html
 
-### RF Layout Challenges
-The most significant challenge was maintaining RF performance in the layout:
-- Symmetrical transistor matching for balanced operation
-- Minimizing parasitic capacitances and inductances
-- Proper ground plane implementation
-- Isolation between RF and DC bias networks
-
-### Performance Optimization
-Achieving target performance required:
-- Careful transistor sizing for optimal transconductance
-- Bias current optimization for linearity vs. power trade-off
-- Load impedance tuning for maximum conversion gain
-- Noise optimization through proper device selection
-
-
-### Reference websites:
+### Further tools reference websites:
 [https://raw.githubusercontent.com/hpretl/iic-osic/main/magic-cheatsheet/magic_cheatsheet.pdf] - keybind cheatsheet for MagicVLSI
 
 ### Some confusions
 During the design, there were some things which caused me some confusions. I have decided to list these here to remind myself in the future, and for anyone working with the open source tools.
 
-1. For a MOSFET device in the PDK, 'nf' in MagicVLSI and 'nf' in Xschem are completely different. Example: a device with W=2um, nf=2 in Magic will have width=W*nf=4um; the same device will have width=W=2um in xschem, with per-finger length of W/nf=1um. Steffan Schippers (the maintainer of Xschem), has even included devices which specify W as the per-finger width:
+1. For a MOSFET device in the PDK, 'nf' in MagicVLSI and 'nf' in Xschem are completely different. Example: a device with W=2um, nf=2 in Magic will have width=W\*nf=4um; the same device will have width=W=2um in xschem, with per-finger length of W/nf=1um. Steffan Schippers (the maintainer of Xschem), has even included devices which specify W as the per-finger width:
 https://web.open-source-silicon.dev/t/16920148/in-xschem-when-using-such-a-symbol-the-nf-one-and-then-havin
 
 

@@ -44,6 +44,16 @@
                 {{ end }}
             </div>
 
+            {{ if .Params.team_members }}
+            <div class="project-team">
+                <span class="team-label">Team:</span>
+                {{ range $index, $member := .Params.team_members }}
+                    {{- if $index }}, {{ end -}}
+                    <span class="team-member">{{ $member }}</span>
+                {{- end }}
+            </div>
+            {{ end }}
+
             <div class="project-tags">
                 {{ if .Params.technologies }}
                 <div class="tech-tags">

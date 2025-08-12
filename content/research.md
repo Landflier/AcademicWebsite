@@ -3,6 +3,7 @@ title: "Research"
 date: 2024-12-21
 type: "research"
 layout: "single"
+draft: "true"
 ---
 
 ## Past research
