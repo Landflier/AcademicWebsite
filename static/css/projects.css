@@ -10,10 +10,10 @@
 }
 
 .project-card {
-    border: 1px solid #ddd;
+    border: 1px solid #f8f8ff;
     border-radius: 8px;
     padding: 1.5rem;
-    background: #fff;
+    background: #f8f8ff;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
