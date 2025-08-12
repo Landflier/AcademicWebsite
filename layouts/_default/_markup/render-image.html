@@ -1,6 +1,6 @@
 <figure class="content-image">
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }} />
   {{ if .Text }}
-  <figcaption>{{ .Text | markdownify }}</figcaption>
+  <figcaption>{{ .Text }}</figcaption>
   {{ end }}
 </figure>
