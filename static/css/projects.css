@@ -77,7 +77,8 @@
 
 .project-summary {
     margin: 1rem 0;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: #444;
 }
 
@@ -111,7 +112,7 @@
 }
 
 .team-member {
-    color: #3bb64b;
+    color: #3e3cb3;
     font-weight: bold;
 }
 

@@ -17,16 +17,16 @@
 /* Header styling for main pages */
 .main-page-header {
     text-align: center;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid #333;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    /*border-bottom: 2px dotted #333;*/
 }
 
 /* Intro/content section for main pages */
 .main-page-intro {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
+    line-height: 1.8;
+    /*color: #666;*/
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
@@ -35,17 +35,17 @@
 /* Distinctive title styling for main section pages */
 .main-page-title {
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: #1a365d;
+    color: #2c5282;
     text-align: center;
     margin: 2rem 0 3rem 0;
     position: relative;
     letter-spacing: -0.02em;
-    line-height: 1.2;
+    line-height: 0.5;
 }
 
-/* Add an elegant underline effect */
+/* Title styling without underline effect */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -61,10 +61,7 @@
         margin: 1rem 0 1.5rem 0;
     }
     
-    .main-page-title::after {
-        width: 30px;
-        bottom: -6px;
-    }
+
 }
 
 /* Override default h1 styling in article headers for main pages */
@@ -95,7 +92,7 @@ article header h1.main-page-title {
     font-size: 1.6rem;
     margin: 2rem 0 1rem 0;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 0.5px solid #a4a5a5;
 }
 
 .main-page-content h3 {
