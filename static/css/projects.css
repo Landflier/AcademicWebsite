@@ -90,13 +90,13 @@
 }
 
 .tech-tag {
-    background: #e6fffa;
+    background: #f6f8fa;
     color: #234e52;
     padding: 0.25rem 0.75rem;
-    border-radius: 12px;
+    border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid #b2f5ea;
+    border: 0.5px solid #9495ac;
 }
 
 .project-team {
@@ -112,7 +112,7 @@
 }
 
 .team-member {
-    color: #3e3cb3;
+    color: #2c5282;
     font-weight: bold;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .github-link {
-    background: #f6f8fa;
+    background: #ebeef0;
     color: #24292e;
     border-color: #d1d5da;
 }
@@ -154,6 +154,17 @@
 
 .demo-link:hover {
     background: #234e52;
+    color: #fff;
+}
+
+.presentation-link {
+    background: #fdf7ff;
+    color: #8a25a3;
+    border-color: #f6e05e;
+}
+
+.presentation-link:hover {
+    background: #8a25a3;
     color: #fff;
 }
 
@@ -192,7 +203,7 @@
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 2px solid #333;
+    border-bottom: 1px solid #949494;
 }
 
 .project-single .project-title {
@@ -267,7 +278,7 @@
 .project-content h2 {
     color: #2c5282;
     font-size: 1.6rem;
-    margin: 2rem 0 1rem 0;
+    margin: 4rem 0 1rem 0;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #e2e8f0;
 }
