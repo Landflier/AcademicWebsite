@@ -1,17 +1,6 @@
 /* Blog-specific styling extensions */
 
-/* Blog Layout Classes - These inherit base styles from projects.css */
-.blog-container {
-    /* Inherits all projects-container styles */
-}
-
-.blog-header {
-    /* Inherits all projects-header styles */
-}
-
-.blog-intro {
-    /* Inherits all projects-intro styles */
-}
+/* Blog Layout Classes - Now using unified main-page classes */
 
 .blog-grid {
     /* Inherits all projects-grid styles */

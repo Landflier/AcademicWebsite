@@ -8,10 +8,6 @@
     <meta name="referrer" content="no-referrer">
     <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
 
-    {{ if not .Site.Params.disableWebFonts }}
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400&display=swap" rel="stylesheet" media="print" type="text/css" onload="this.media='all'">
-    {{ end }}
-
     <title>
       {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
       {{ if eq $url "/" }}
@@ -32,6 +28,11 @@
     
     {{ if eq .Type "blog" }}
     <link rel="stylesheet" href="{{ "/css/blog.css" | relURL }}">
+    {{ end }}
+    
+    <!-- CSS for main pages (About, Research, Projects, and Blog listing) -->
+    {{ if or (eq .Type "about") (eq .Type "research") (eq .Type "projects") (eq .Type "blog") }}
+    <link rel="stylesheet" href="{{ "/css/main_pages.css" | relURL }}">
     {{ end }}
 
     {{ range .AlternativeOutputFormats -}}

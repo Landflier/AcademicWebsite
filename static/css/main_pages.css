@@ -1,0 +1,126 @@
+/* Main Pages Styling - for About, Research, Projects, and Blog main pages */
+
+/* Unified container for all main pages */
+.main-page-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+/* Even wider on very large screens */
+@media (min-width: 1600px) {
+    .main-page-container {
+        max-width: 1400px;
+    }
+}
+
+/* Header styling for main pages */
+.main-page-header {
+    text-align: center;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    /*border-bottom: 2px dotted #333;*/
+}
+
+/* Intro/content section for main pages */
+.main-page-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    /*color: #666;*/
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Distinctive title styling for main section pages */
+.main-page-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c5282;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 0.5;
+}
+
+/* Title styling without underline effect */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-page-title {
+        font-size: 2.5rem;
+        margin: 1.5rem 0 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-page-title {
+        font-size: 2rem;
+        margin: 1rem 0 1.5rem 0;
+    }
+    
+
+}
+
+/* Override default h1 styling in article headers for main pages */
+article header h1.main-page-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Blog header specific styling when using main-page-title class */
+.blog-header .main-page-title {
+    margin-bottom: 1.5rem;
+}
+
+/* Projects header specific styling when using main-page-title class */
+.projects-header .main-page-title {
+    margin-bottom: 1.5rem;
+}
+
+/* Content area styling */
+.main-page-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.main-page-content h2 {
+    color: #2c5282;
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #a4a5a5;
+}
+
+.main-page-content h3 {
+    color: #2d3748;
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.main-page-content p {
+    margin-bottom: 1.2rem;
+}
+
+.main-page-content ul, .main-page-content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.main-page-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive design for main pages */
+@media (max-width: 768px) {
+    .main-page-container {
+        padding: 1rem;
+    }
+    
+    .main-page-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+}
