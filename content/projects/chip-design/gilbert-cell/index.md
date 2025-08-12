@@ -2,7 +2,7 @@
 title: "Gilbert Cell Mixer Design"
 subtitle: "RF Analog Circuit Design using GF180MCU Technology"
 technologies: ["Xschem", "Magic-VLSI", "CACE", "GLayout", "GF180MCU PDK", "Python", "RF Design"]
-image: "/images/projects/gilbert-mixer-layout.png"
+image: "/images/projects/gilbert_cell/Gilbert_cell_icon.svg"
 description: "Design and implementation of a Gilbert cell mixer for RF applications using the GF180MCU process, including full layout, verification, and performance characterization."
 github: "https://github.com/Landflier/Chipathon_2025_gLayout"
 presentation: "https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/doc/TimeTranscenders_Proposal.pdf"
@@ -18,30 +18,42 @@ This project involves the design and implementation of a Gilbert cell mixer for 
 The Gilbert cell is a type of mixer, utilizing three differential pairs. The mathematical operation of a mixer is to multiply the two input signals (RF and LO). Supposing that the two singals are sine waves with the following shape:
 
 $$
-\begin{gathered}
-v_{R F}=A(t) \cos \left(\omega_{RF} t+\phi(t)\right) \\
-v_{LO}=A_{LO} \cos \left(\omega_{LO} t\right)
-\end{gathered}
+\begin{align}
+& v_{RF}=A(t) \cos \left(\omega_{RF} t+\phi(t)\right) \nonumber \newline
+& v_{LO}=A_{LO} \cos \left(\omega_{LO} t\right) \nonumber \tag{1}
+\end{align}
 $$
 
 the mixer will produce the following output:
 
 $$
-\begin{aligned}
-v_{\text {out }}= & v_{R F} \times v_{LO} \\
-= & \frac{A(t) A_{LO}}{2}\left\{\cos \phi\left(\cos \left(\omega_{LO}+\omega_{RF}\right) t+\cos \left(\omega_{LO}-\omega_{RF}\right) t\right)\right. \\
-& \left.-\sin \phi\left(\sin \left(\omega_{LO}+\omega_{RF}\right) t+\sin \left(\omega_{LO}-\omega_{RF}\right) t\right)\right\}
-=\frac{A(t) A_{LO}}{2} & \left\{\cos \left(\left(\omega_{LO}+\omega_{RF}\right) t+\phi(t)\right)+\right. \\
-& \left.\cos \left(\left(\omega_{LO}-\omega_{RF}\right) t+\phi(t)\right)\right\}
-\label{sec:introduction;eq:mixer_output}
-\end{aligned}
+\begin{align}
+v_{\text{out}} &= v_{RF} \times v_{LO} \nonumber \newline
+&= \frac{A(t) A_{LO}}{2}\left[\cos \phi(t)\left(\cos \left(\omega_{LO}+\omega_{RF}\right) t+\cos \left(\omega_{LO}-\omega_{RF}\right) t\right) - \right. \nonumber \newline
+& \left.\quad \phantom{=\frac{A(t) A_{L}}{2}} \sin \phi(t)\left(\sin \left(\omega_{LO}+\omega_{RF}\right) t+\sin \left(\omega_{LO}-\omega_{RF}\right) t\right)\right] \nonumber \newline
+&= \frac{A(t) A_{LO}}{2} \left[\cos \left(\left(\omega_{LO}+\omega_{RF}\right) t+\phi(t)\right) + \right. \nonumber \newline
+& \left.\quad \phantom{=\frac{A(t) A_{L}}{2}} \cos \left(\left(\omega_{LO}-\omega_{RF}\right) t+\phi(t)\right)\right] \tag{2}
+\end{align}
 $$
 
 In this derivation we have ignored the non-linearity of the mixer, thus omitting the higher order harmonics. These harmonics will become important when we discuss the linearity of the mixer. 
 
-As can be seen from \ref{sec:introduction;eq:mixer_output}, the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega{LO} \plusminus \omega{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms, thus:
+As can be seen from equation (1), the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega_{LO} \pm \omega_{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms. But we will try to keep the math to a minimum here...
 
+### Target specifications
 
+### Performance Metrics
+
+In the table below we have given the metrics we aim to achieve in this project. The simulation and future measuremene values are included for easy comparison.
+| Metric | Target | Simulation | Measured |
+|--------|:------:|:----------:|:--------:|
+| RF frequency | $89.3\text{MHz}$ | $89.3\text{MHz}$ | - |
+| LO frequency | $100\text{MHz}$ | $100\text{MHz}$ | - |
+| IF frequency | $10.7\text{MHz}$ | $10.7\text{MHz}$ | - |
+| Conversion gain | $\geq 12\text{dB}$ | - | - |
+| Input P1dB | $-8\text{dBm}$ | - | - |
+| IIP3 | $\leq +2\text{dBm}$ | - | - |
+| Noise figure | $\leq 9\text{dB}$ | - | - |
 
 #### References
 https://www.rfcafe.com/references/articles/wj-tech-notes/mixers-characteristics-performance-p1.pdf
@@ -50,7 +62,7 @@ https://www.rfcafe.com/references/articles/wj-tech-notes/mixers-characteristics-
 In our workflow we used Xschem for creating the schematics, and a python notebook for gm/ID transistor sizing.
 
 ### Gilbert cell
-![Schematic of the Gilbert cell mixer, implemented in Xschem](/images/projects/gilbert_cell/interdigited_design.png)
+![Schematic of the Gilbert cell mixer, implemented in Xschem](/images/projects/gilbert_cell/Gilbert_cell_no_hierarchy_editted.svg)
 
 #### Transistor sizing
 For the tranisistor sizing, we chose to use the gm/ID methodology. The RF
@@ -61,16 +73,16 @@ selected to operate more towards the linear triode region, but still in
 moderate inversion, with a gm/Id=15. Higher gm/ID was avoided in order to avoid
 having too big devices and sacrifacing some of the transistor's ft (although
 the frequency response is a smaller issue, since we are working in the FM
-broadcasting band). For the sizing, a jupyter notebook was used [https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Gilbert_cell.ipynb]. The gm/ID calculation vs the simulation results are given in the table below:
+broadcasting band). For the sizing, a [Jupyter notebook for gm/ID transistor sizing](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Gilbert_cell.ipynb) was used. The gm/ID calculation vs the simulation results are given in the table below:
 
-| Source | Transistor | gm/ID | gm(mS) | ID(uA) | jd(uA/μm²) | W(μm) | ft(GHz) | VGS(V) | VDS(V) |
-|--------|---------|:------:|:--------:|:--------:|:----------:|:------:|:--------:|:------:|:------:|
-| Calculation (nf=1) | RF | 12 | 0.600 | 50 | 4.30 | 11.64 | 7.68 | - | 1.65 |
-| Calculation (nf=6) | RF | 12 | 0.600 | 50 | 4.80 | 10.38 | 14.34* | - | 1.65 |
-| Calculation (nf=1) | LO | 15 | 0.375 | 25 | 2.10 | 23.84 | 2.45 | - | 1.65 |
-| Calculation (nf=6) | LO | 15 | 0.375 | 25 | 2.43 | 20.57 | 5.28* | - | 1.65 |
-| Simulation | RF | 11 | 0.55 | 50 | - | 10 (nf=5) | - | 0.83 | 0.39 |
-| Simulation | LO | 16 | 0.42 | 25 | - | 20 (nf=5) | - | 0.82 | 2.23 |  
+| Source | Transistor | gm/ID | gm(mS) | ID(uA) |  W(μm) | ft(GHz) | VGS(V) | VDS(V) |
+|------|-------|:------:|:-------:|:--------:|:------:|:-------:|:-----:|:-----:|
+| Calculation (nf=1) | RF | 12 | 0.600 | 50 | 11.64 | 7.68 | - | 1.65 |
+| Calculation (nf=6) | RF | 12 | 0.600 | 50 | 10.38 | 14.34* | - | 1.65 |
+| Calculation (nf=1) | LO | 15 | 0.375 | 25 | 23.84 | 2.45 | - | 1.65 |
+| Calculation (nf=6) | LO | 15 | 0.375 | 25 | 20.57 | 5.28* | - | 1.65 |
+| Simulation | RF | 11 | 0.55 | 50 | 10 (nf=5) | - | 0.83 | 0.39 |
+| Simulation | LO | 16 | 0.42 | 25 | 20 (nf=5) | - | 0.82 | 2.23 |  
 
 
 Note the calculation results depend on the 'nf' that was used in the simulations of the single device .mat files. The models which are to be used for these simulations are a bit different from the ones provided by the foundry - the correct ones are provided by B Murman on this github repo: [https://github.com/bmurmann/Chipathon2025/tree/main/models_updated_2025.07.19/ngspice].
@@ -114,7 +126,7 @@ The physical layout was implemented following RF design principles:
 - **Design rule compliance**: Adherence to GF180MCU PDK design rules
 
 ### Gilbert cell
-For the Gilbert mixer, matching in the RF diff pair and 
+Of paramount importance in the layout is the matching of the RF diff pair, the two LO diff pairs, and the $R_{load}$ resistors. Thus, we are including a brief outline of what matching techniques are used in our project.
 
 Some tidbits and pictures on transistor layout matching:
 
@@ -148,20 +160,17 @@ Refer to [2]- autozeroing and chopper stabilization (not used in this project).
 For the biasing network, we chose to use an on-chip bandgap reference. The circuit provides the current biases for the RF differential pair of the mixer
 
 ## Verification & Analysis
+### Gilbert cell
+Nelow are given waveforms for the output of the Gilbert mixer, in both the time and frequency domain. The circuit biasing is with ideal current sources, and both the RF and LO signals each contain a single frequency
 
 
-## Results
+![Time-domain simulation of the mixer, t=300ns](/images/projects/gilbert_cell/Time-series_editted.svg)
+![Frequency spectrum of the mixer, with $f_{LO}=100MHz$ and $f_{RF}=89.3MHz$.](/images/projects/gilbert_cell/FFT_editted.svg)
+### Biasing network
+### Top level
 
-### Performance Metrics
-- **RF frequency**: 89.3 MHz
-- **LO frequency**: 100 MHz
-- **IF frequency**: 10.7 MHz
-- **Conversion gain**: 12 dB
-- **Input P1dB**: -8 dBm
-- **IIP3**: +2 dBm
-- **Noise figure**: 9 dB
-- **Power consumption**: 8 mW at 1.8V supply
-- **Area**: 0.25 mm²
+## Testing results
+
 
 ### Key Achievements
 - Achieved target conversion gain with excellent linearity
