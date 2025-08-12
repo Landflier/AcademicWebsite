@@ -1,4 +1,4 @@
-baseURL = "http://10.0.0.31:1313/"
+baseURL = "https://www.landflier.com/"
 languageCode = "en-us"
 title = "VasilRYordnov"
 
@@ -14,7 +14,7 @@ enableGitInfo = true
 [params]
   sitename = "Vasil Radkov Yordanov"
   disableWebFonts = false
-  description = "My personal website, where I share thoughts about conferences I attend, papers and books I read, physics, philosophy, cinema, and open-source"
+  description = "My personal website, where I share thoughts about conferences I attend, papers and books I read, physics, philosophy, cinema, and open-source projects."
 
 [[menu.main]]
     name = "About"
