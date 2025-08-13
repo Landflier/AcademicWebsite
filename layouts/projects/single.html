@@ -8,10 +8,14 @@
         
         {{ if .Params.team_members }}
         <div class="project-team">
-            <span class="team-label">Team members:</span>
+            <span class="team-label">Team:</span>
             {{ range $index, $member := .Params.team_members }}
                 {{ if gt $index 0 }}, {{ end }}
-                <span class="team-member">{{ $member }}</span>
+                {{ if reflect.IsMap $member }}
+                    <a href="{{ $member.github }}" class="team-member team-member-link" target="_blank" rel="noopener">{{ $member.name }}</a>
+                {{ else }}
+                    <span class="team-member">{{ $member }}</span>
+                {{ end }}
             {{ end }}
         </div>
         {{ end }}

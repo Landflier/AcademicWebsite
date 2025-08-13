@@ -242,6 +242,21 @@
     color: #1a365d;
 }
 
+.project-single .project-team .team-member-link {
+    text-decoration: none;
+    color: #2c5282;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+    display: inline;
+    transition: color 0.2s ease;
+}
+
+.project-single .project-team .team-member-link:hover {
+    color: #1a365d;
+    text-decoration: underline;
+}
+
 .project-single .project-meta {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

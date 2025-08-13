@@ -2,7 +2,10 @@
 title: "Gilbert Cell Mixer Design"
 subtitle: "RF Analog Circuit Design using GF180MCU Technology"
 technologies: ["Xschem", "Magic-VLSI", "CACE", "GLayout", "GF180MCU PDK", "Python", "RF Design"]
-team_members: ["Shaikh Shoeb Dawood", "Vasil Yordanov"]
+team_members: [
+  {name: "Shaikh Shoeb Dawood", github: "https://github.com/shoebNTU"},
+  {name: "Vasil Yordanov", github: "https://github.com/Landflier"}
+]
 image: "/images/projects/gilbert_cell/Gilbert_cell_icon.svg"
 description: "Design and implementation of a Gilbert cell mixer for RF applications using the GF180MCU process, including full layout, verification, and performance characterization."
 github: "https://github.com/Landflier/Chipathon_2025_gLayout"
