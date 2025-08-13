@@ -23,10 +23,10 @@
      showgrid="false"
      units="mm"
      inkscape:zoom="1.1135417"
-     inkscape:cx="444.5276"
-     inkscape:cy="529.39196"
-     inkscape:window-width="1364"
-     inkscape:window-height="726"
+     inkscape:cx="539.71935"
+     inkscape:cy="307.57717"
+     inkscape:window-width="1352"
+     inkscape:window-height="628"
      inkscape:window-x="0"
      inkscape:window-y="20"
      inkscape:window-maximized="1"
@@ -318,14 +318,14 @@ text {font-family: Sans-Serif;}
      font-size="14.4873px"
      id="text713"
      x="252.94876"
-     y="210.3056">VSS</text>
+     y="210.3056">VDD</text>
   <text
      fill="#00ccee"
      xml:space="preserve"
      font-size="14.4873px"
      id="text715"
      x="519.02875"
-     y="210.3056">VSS</text>
+     y="210.3056">VDD</text>
   <text
      fill="#00ccee"
      xml:space="preserve"
@@ -451,6 +451,14 @@ text {font-family: Sans-Serif;}
      y="435.81158"
      style="fill:#000000;fill-opacity:1">XM_dp_lo_b_neg</text>
   <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text767-6"
+     x="606.35974"
+     y="200.87007"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">ppolyf_u_1k</text>
+  <text
      fill="#ff0000"
      xml:space="preserve"
      font-size="8.0485px"
@@ -478,14 +486,6 @@ text {font-family: Sans-Serif;}
      id="text775"
      x="621.83978"
      y="460.01257">G</text>
-  <text
-     fill="#cccccc"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text783"
-     x="294.39575"
-     y="623.54559"
-     style="fill:#000000;fill-opacity:1">XM_rf_pos</text>
   <text
      fill="#ff0000"
      xml:space="preserve"
@@ -518,23 +518,16 @@ text {font-family: Sans-Serif;}
      fill="#aaaa00"
      xml:space="preserve"
      font-size="10.7313px"
-     id="text795"
-     x="467.99356"
-     y="670.27734">1 x 10u / 0.28u</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
      id="text797"
-     x="263.0459"
-     y="686.72968">nf=5</text>
+     x="315.01028"
+     y="695.62769">nf=5</text>
   <text
      fill="#cccccc"
      xml:space="preserve"
      font-size="10.7313px"
      id="text799"
-     x="461.90076"
-     y="623.54559"
+     x="468.7619"
+     y="607.82916"
      style="fill:#000000;fill-opacity:1">XM_rf_neg</text>
   <text
      fill="#ff0000"
@@ -569,22 +562,8 @@ text {font-family: Sans-Serif;}
      xml:space="preserve"
      font-size="10.7313px"
      id="text811"
-     x="262.84155"
-     y="672.30817">1 x 10u / 0.28u</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text813"
-     x="469.37329"
-     y="684.69885">nf=5</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text815"
-     x="115.61673"
-     y="203.2516">1 * 1e-6 / 3e-6</text>
+     x="259.85516"
+     y="681.85522">1 x 10u / 0.28u</text>
   <text
      fill="#ff0000"
      xml:space="preserve"
@@ -605,8 +584,24 @@ text {font-family: Sans-Serif;}
      xml:space="preserve"
      font-size="10.7313px"
      id="text823"
-     x="606.35974"
-     y="203.2516">1 * 1e-6 / 3e-6</text>
+     x="605.50043"
+     y="215.04503">1 * 1e-6 / 20e-6</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text767-6-5"
+     x="129.08536"
+     y="199.75566"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">ppolyf_u_1k</text>
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text823-6"
+     x="109.06373"
+     y="215.04503"
+     style="font-family:Sans-Serif">1 * 1e-6 / 20e-6</text>
   <text
      fill="#ff0000"
      xml:space="preserve"
@@ -628,8 +623,8 @@ text {font-family: Sans-Serif;}
      font-size="10.7313px"
      transform="rotate(-90)"
      id="text831"
-     x="-824.78461"
-     y="396.13376">1 * 1e-6 / 1e-6</text>
+     x="-836.0224"
+     y="395.61258">1 * 0.5e-6 / 5e-6</text>
   <text
      fill="#ff0000"
      xml:space="preserve"
@@ -647,6 +642,39 @@ text {font-family: Sans-Serif;}
      x="-839.78461"
      y="412.24875"
      style="fill:#000000;fill-opacity:1">XR_degeneration</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     transform="rotate(-90)"
+     id="text837-9"
+     x="-788.93671"
+     y="425.64279"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">pplus_u</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text799-0"
+     x="293.59927"
+     y="607.82916"
+     style="font-family:Sans-Serif;fill:#000000;fill-opacity:1">XM_rf_neg</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text837-9-2-9"
+     x="287.74188"
+     y="664.84192"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">nfet_03v3</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text837-9-2-9-6"
+     x="468.03357"
+     y="664.84192"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">nfet_03v3</text>
   <path
      class="l4"
      d="m 196.19673,439.8066 v 46.433"
@@ -1500,10 +1528,101 @@ text {font-family: Sans-Serif;}
      class="l1"
      d="m 301.96173,648.7576 h 20.638"
      id="path1263" />
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text797-6"
+     x="468.03357"
+     y="693.03162"
+     style="font-family:Sans-Serif">nf=5</text>
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text811-0"
+     x="467.82922"
+     y="680.61011"
+     style="font-family:Sans-Serif">1 x 10u / 0.28u</text>
   <path
      class="l1"
      d="m 487.69673,648.7576 h 20.637"
      id="path1265" />
+  <g
+     id="g2">
+    <text
+       fill="#aaaa00"
+       xml:space="preserve"
+       font-size="10.7313px"
+       id="text797-61"
+       x="612.56793"
+       y="517.21863"
+       style="font-family:Sans-Serif">nf=5</text>
+    <text
+       fill="#aaaa00"
+       xml:space="preserve"
+       font-size="10.7313px"
+       id="text811-8"
+       x="612.36359"
+       y="502.79712"
+       style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
+    <text
+       fill="#cccccc"
+       xml:space="preserve"
+       font-size="10.7313px"
+       id="text837-9-2-9-7"
+       x="612.56793"
+       y="487.02896"
+       style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">nfet_03v3</text>
+  </g>
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text797-61-5"
+     x="312.95871"
+     y="512.59766"
+     style="font-family:Sans-Serif">nf=5</text>
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text811-8-9"
+     x="313.41473"
+     y="501.86484"
+     style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text837-9-2-9-7-2"
+     x="313.61908"
+     y="486.09668"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">nfet_03v3</text>
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text797-61-9"
+     x="160.97328"
+     y="513.68616"
+     style="font-family:Sans-Serif">nf=5</text>
+  <text
+     fill="#aaaa00"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text811-8-7"
+     x="105.81818"
+     y="501.16965"
+     style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
+  <text
+     fill="#cccccc"
+     xml:space="preserve"
+     font-size="10.7313px"
+     id="text837-9-2-9-7-3"
+     x="133.70488"
+     y="484.44901"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">nfet_03v3</text>
   <path
      class="l1"
      d="m 363.87373,679.7136 v 41.274"
@@ -1632,64 +1751,24 @@ text {font-family: Sans-Serif;}
      fill="#aaaa00"
      xml:space="preserve"
      font-size="10.7313px"
-     id="text733"
-     x="105.71873"
-     y="501.11646"
+     id="text797-61-9-1"
+     x="460.09537"
+     y="516.44818"
      style="font-family:Sans-Serif">nf=5</text>
   <text
      fill="#aaaa00"
      xml:space="preserve"
      font-size="10.7313px"
-     id="text747"
-     x="105.51438"
-     y="488.70871"
+     id="text811-8-7-2"
+     x="404.94025"
+     y="503.93173"
      style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
   <text
-     fill="#aaaa00"
+     fill="#cccccc"
      xml:space="preserve"
      font-size="10.7313px"
-     id="text733-6"
-     x="311.71875"
-     y="501.11646"
-     style="font-family:Sans-Serif">nf=5</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text747-2"
-     x="311.51437"
-     y="488.70871"
-     style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text733-6-1"
-     x="409.71875"
-     y="501.11646"
-     style="font-family:Sans-Serif">nf=5</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text747-2-2"
-     x="409.51437"
-     y="488.70871"
-     style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text733-6-1-0"
-     x="613.71875"
-     y="501.11646"
-     style="font-family:Sans-Serif">nf=5</text>
-  <text
-     fill="#aaaa00"
-     xml:space="preserve"
-     font-size="10.7313px"
-     id="text747-2-2-9"
-     x="613.5144"
-     y="488.70871"
-     style="font-family:Sans-Serif">1 x 20u / 0.28u</text>
+     id="text837-9-2-9-7-3-9"
+     x="432.82697"
+     y="487.21109"
+     style="font-family:Sans-Serif;fill:#929292;fill-opacity:1">nfet_03v3</text>
 </svg>

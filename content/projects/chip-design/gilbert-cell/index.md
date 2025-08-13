@@ -43,21 +43,19 @@ As can be seen from equation (1), the mixer produces two sine waves, at the freq
 
 ### Target specifications
 
-### Performance Metrics
-
 In the table below we have given the metrics we aim to achieve in this project. The simulation and future measuremene values are included for easy comparison.
 | Metric | Target | Simulation | Measured |
 |--------|:------:|:----------:|:--------:|
 | RF frequency | $89.3\text{MHz}$ | $89.3\text{MHz}$ | - |
 | LO frequency | $100\text{MHz}$ | $100\text{MHz}$ | - |
 | IF frequency | $10.7\text{MHz}$ | $10.7\text{MHz}$ | - |
-| Conversion gain | $\geq 12\text{dB}$ | - | - |
+| Conversion gain | $\geq 12\text{dB}$ | $11.55\text{dB}$ | - |
 | Input P1dB | $-8\text{dBm}$ | - | - |
 | IIP3 | $\leq +2\text{dBm}$ | - | - |
 | Noise figure | $\leq 9\text{dB}$ | - | - |
 
 #### References
-https://www.rfcafe.com/references/articles/wj-tech-notes/mixers-characteristics-performance-p1.pdf
+[1] RF Cafe, "Mixer Characteristics and Performance," WJ Tech Notes. [Online]. Available: https://www.rfcafe.com/references/articles/wj-tech-notes/mixers-characteristics-performance-p1.pdf
 
 ## Circuit Design
 In our workflow we used Xschem for creating the schematics, and a python notebook for gm/ID transistor sizing.
@@ -89,6 +87,9 @@ broadcasting band). For the sizing, a [Jupyter notebook for gm/ID transistor siz
 Note the calculation results depend on the 'nf' that was used in the simulations of the single device .mat files. The models which are to be used for these simulations are a bit different from the ones provided by the foundry - the correct ones are provided by B Murman on this github repo: [https://github.com/bmurmann/Chipathon2025/tree/main/models_updated_2025.07.19/ngspice].
 
 * These values shouldn't be trusted, since 'cgso' and 'cgdo' .op values were zero in the simulation. This means the capacitances of the G,D and S terminals are off.
+
+\* These fT values (14.34 GHz and 5.28 GHz) shouldn't be trusted, since 'cgso' and 'cgdo' .op values were zero in the simulation. This means the capacitances of the G,D and S terminals are off.
+
 #### Notes to self
 
 - **Problem**
@@ -111,7 +112,7 @@ For the biasing network, we decided to use an on-chip bandgap reference. This ne
 
 #### References
 
-[1] https://wiki.analog.com/university/courses/electronics/text/chapter-14
+[1] Analog Devices, "Chapter 14," University Courses - Electronics. [Online]. Available: https://wiki.analog.com/university/courses/electronics/text/chapter-14
 
 ### Matching network
 The LO and RF input networks of the Gilbert cell require an impedence matching network, in order to maximize power trasfer, but more importantly, to ensure that the input waveforms have as little distortion as possible from reflected waves. 
@@ -120,18 +121,10 @@ The LO and RF input networks of the Gilbert cell require an impedence matching n
 ![Schematic of the input matching network, implemented in Xschem](/images/projects/gilbert_cell/interdigited_design.png)
 
 ## Layout Implementation
-The physical layout was implemented following RF design principles:
-- **Floorplanning**: Symmetrical layout for balanced operation
-- **RF routing**: Minimized parasitics and maintained signal integrity
-- **Ground plane**: Solid ground plane for low-noise performance
-- **Design rule compliance**: Adherence to GF180MCU PDK design rules
-
-### Gilbert cell
-Of paramount importance in the layout is the matching of the RF diff pair, the two LO diff pairs, and the $R_{load}$ resistors. Thus, we are including a brief outline of what matching techniques are used in our project.
-
-Some tidbits and pictures on transistor layout matching:
+In RF and analog layout, device matching is paramount for the correct operation of the circuits. Below, we have included some tidbits and pictures on transistor layout matching:
 
 1. Dummy transistors
+To ensure the same operation point for devices across the physical area of the chip, dummy structures are placed to homogenize the local environment of the devices. In [3] (which is taken from a more formal source [1]), various dummy techniques are shown for resistors, capacitors and transistors.
 
 2. Interdigited design
 Current flows laterally across a CMOS (i.e from a typical Manhattan layout, right-to-left or left-to-right). These two orientations might have different mobilities, for example due to 'tilted implants' from the ion implantation, which is done at an angle.  There are other sources of orientation mismatch, such as litho misalignment (drain and source could be defined with different layers on the photomask level). 
@@ -149,6 +142,14 @@ Current flows laterally across a CMOS (i.e from a typical Manhattan layout, righ
 4. More esoteric matchings (withing +-1mV and +-1& current)
 Refer to [2]- autozeroing and chopper stabilization (not used in this project). 
 
+### Gilbert cell
+As a start, we provide an estimate of the area of the project. The layout was generated and measured using Magic VLSI.
+
+
+![Table 13.3 from [1], examples of interdigited common-centroid layout patterns of common-source devices. Brackets denote a pattern which can be repeated a number of times, given by the superscript. Dashes denote places where S-D cannot be merged](/images/projects/gilbert_cell/Gilbert_area_estimation.svg)
+
+We note that this layout does not include dummy devices, no interdigitation is implemented (which would reduce the area), and no biasing network are included. Thus, we estimate the actual design to be around $60\textit{ um}x60\textit{ um}$, for a total area of $3600 um^2$.
+
 #### References:
 
 [1] A. Hastings, *The Art of Analog Layout*, 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2006.
@@ -158,11 +159,11 @@ Refer to [2]- autozeroing and chopper stabilization (not used in this project).
 [3] "Optimizing Analog Layouts: Techniques for Effective Layout Matching," Design & Reuse. [Online]. Available: https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
 
 ### Biasing network
-For the biasing network, we chose to use an on-chip bandgap reference. The circuit provides the current biases for the RF differential pair of the mixer
+For the biasing network, we have decided to pass 100uA of current through the bondbands, and then, using current mirrors, to distribute 50uA to each of branches of the RF differential pair.
 
 ## Verification & Analysis
 ### Gilbert cell
-Nelow are given waveforms for the output of the Gilbert mixer, in both the time and frequency domain. The circuit biasing is with ideal current sources, and both the RF and LO signals each contain a single frequency
+Below are given waveforms for the output of the Gilbert mixer, in both the time and frequency domain. The circuit biasing is with ideal current sources, and both the RF and LO signals each contain a single frequency
 
 
 ![Time-domain simulation of the mixer, t=300ns](/images/projects/gilbert_cell/Time-series_editted.svg)
@@ -171,7 +172,6 @@ Nelow are given waveforms for the output of the Gilbert mixer, in both the time 
 ### Top level
 
 ## Testing results
-### Testing equipement
 The following testing equipment will be used to measure the mixer performance:
 - Vector Network Analyzer (VNA) : Measures insertion loss, return loss, and isolation.
 - Spectrum Analyzer : Analyzes frequency response and spurious signals.
@@ -187,18 +187,20 @@ The test setups for the different measurements are schematically shown in the fi
 ![Isolation measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-001.svg)
 
 #### References
-[1] https://www.test-and-measurement-world.com/measurements/rf/rf-mixer-testing
-[2] https://www.minicircuits.com/applications/application_notes.html
-[3] https://www.minicircuits.com/appdoc/AN00-009.html
+[1] Test & Measurement World, "RF Mixer Testing." [Online]. Available: https://www.test-and-measurement-world.com/measurements/rf/rf-mixer-testing
 
-### Further tools reference websites:
-[https://raw.githubusercontent.com/hpretl/iic-osic/main/magic-cheatsheet/magic_cheatsheet.pdf] - keybind cheatsheet for MagicVLSI
+[2] Mini-Circuits, "Application Notes." [Online]. Available: https://www.minicircuits.com/applications/application_notes.html
 
-### Some confusions
+[3] Mini-Circuits, "Application Note AN00-009." [Online]. Available: https://www.minicircuits.com/appdoc/AN00-009.html
+
+## Further tools reference websites:
+[1] H. Pretl, "Magic VLSI Keybind Cheatsheet," IIC-OSIC. [Online]. Available: https://raw.githubusercontent.com/hpretl/iic-osic/main/magic-cheatsheet/magic_cheatsheet.pdf
+
+## Some confusions
 During the design, there were some things which caused me some confusions. I have decided to list these here to remind myself in the future, and for anyone working with the open source tools.
 
 1. For a MOSFET device in the PDK, 'nf' in MagicVLSI and 'nf' in Xschem are completely different. Example: a device with W=2um, nf=2 in Magic will have width=W\*nf=4um; the same device will have width=W=2um in xschem, with per-finger length of W/nf=1um. Steffan Schippers (the maintainer of Xschem), has even included devices which specify W as the per-finger width:
-https://web.open-source-silicon.dev/t/16920148/in-xschem-when-using-such-a-symbol-the-nf-one-and-then-havin
+Open Source Silicon Community, "In Xschem, when using such a symbol, the nf one and then havin," Forum Discussion. [Online]. Available: https://web.open-source-silicon.dev/t/16920148/in-xschem-when-using-such-a-symbol-the-nf-one-and-then-havin
 
 
 
