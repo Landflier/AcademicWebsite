@@ -6,6 +6,16 @@
         <p class="project-subtitle">{{ .Params.subtitle }}</p>
         {{ end }}
         
+        {{ if .Params.team_members }}
+        <div class="project-team">
+            <span class="team-label">Team members:</span>
+            {{ range $index, $member := .Params.team_members }}
+                {{ if gt $index 0 }}, {{ end }}
+                <span class="team-member">{{ $member }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+        
         <div class="project-meta">
             {{ if .Params.event }}
             <div class="meta-item">

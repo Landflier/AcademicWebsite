@@ -221,6 +221,27 @@
     margin-bottom: 2rem;
 }
 
+
+.project-single .project-team .team-label {
+    color: #495057;
+    font-weight: 600;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+}
+
+.project-single .project-team .team-member {
+    color: #2c5282;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+    display: inline;
+    transition: color 0.2s ease;
+}
+
+.project-single .project-team .team-member:hover {
+    color: #1a365d;
+}
+
 .project-single .project-meta {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
