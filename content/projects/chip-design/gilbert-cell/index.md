@@ -151,7 +151,8 @@ As a start, we provide an estimate of the area of the project. The layout was ge
 
 ![Table 13.3 from [1], examples of interdigited common-centroid layout patterns of common-source devices. Brackets denote a pattern which can be repeated a number of times, given by the superscript. Dashes denote places where S-D cannot be merged](/images/projects/gilbert_cell/Gilbert_area_estimation.svg)
 
-We note that this layout does not include dummy devices, no interdigitation is implemented (which would reduce the area), and no biasing network are included. Thus, we estimate the actual design to be around $60\textit{ um}x60\textit{ um}$, for a total area of $3600 um^2$.
+We note that this layout does not include dummy devices, no interdigitation is implemented (which would reduce the area), and no biasing network are included. Thus, we estimate the actual design to be around $80\textit{ um}x80\textit{ um}$, for a total area of $6400 um^2$.
+
 
 #### References:
 
@@ -188,6 +189,9 @@ The test setups for the different measurements are schematically shown in the fi
 ![Two-tone third order distortion (IIP3). Figure from \[3\]](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-003.svg)
 ![VSWR measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-002.svg)
 ![Isolation measurement setup. Figure from \[3\].](/images/projects/gilbert_cell/Application_Note_AN009-Mini-Circuits-001.svg)
+
+For our chip, we used the following pin-out:
+![Pin-out of the Gilbert cell mixer on a GF180MCU padframe](/images/projects/gilbert_cell/Pinout.svg)
 
 #### References
 [1] Test & Measurement World, "RF Mixer Testing." [Online]. Available: https://www.test-and-measurement-world.com/measurements/rf/rf-mixer-testing
