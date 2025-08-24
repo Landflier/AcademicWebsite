@@ -117,10 +117,55 @@ article header h1.main-page-title {
 @media (max-width: 768px) {
     .main-page-container {
         padding: 1rem;
+        max-width: 100%;
+        margin: 0;
     }
     
     .main-page-header {
         margin-bottom: 2rem;
         padding-bottom: 1rem;
+    }
+    
+    .main-page-intro {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+    
+    .main-page-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .main-page-content h2 {
+        font-size: 1.4rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .main-page-content h3 {
+        font-size: 1.2rem;
+        margin: 1.25rem 0 0.75rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-page-container {
+        padding: 0.75rem;
+    }
+    
+    .main-page-intro {
+        font-size: 0.95rem;
+    }
+    
+    .main-page-content {
+        font-size: 0.95rem;
+    }
+    
+    .main-page-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .main-page-content h3 {
+        font-size: 1.1rem;
     }
 }

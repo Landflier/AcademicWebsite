@@ -89,8 +89,6 @@ broadcasting band). For the sizing, a [Jupyter notebook for gm/ID transistor siz
 
 Note the calculation results depend on the 'nf' that was used in the simulations of the single device .mat files. The models which are to be used for these simulations are a bit different from the ones provided by the foundry - the correct ones are provided by B Murman on this github repo: [https://github.com/bmurmann/Chipathon2025/tree/main/models_updated_2025.07.19/ngspice].
 
-* These values shouldn't be trusted, since 'cgso' and 'cgdo' .op values were zero in the simulation. This means the capacitancesacitances of the G,D and S terminals are off.
-
 \* These fT values (14.34 GHz and 5.28 GHz) shouldn't be trusted, since 'cgso' and 'cgdo' .op values were zero in the simulation. This means the capacitance of the G,D and S terminals are off.
 
 #### Notes to self

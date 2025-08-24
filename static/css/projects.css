@@ -461,6 +461,8 @@
 @media (max-width: 768px) {
     .project-single {
         padding: 1rem;
+        max-width: 100%;
+        margin: 0;
     }
     
     .projects-grid {
@@ -485,6 +487,65 @@
     .project-single .project-meta {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    /* Better mobile text scaling */
+    .project-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .project-content h2 {
+        font-size: 1.4rem;
+        margin: 2rem 0 1rem 0;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.75rem 0;
+    }
+    
+    .project-content h4 {
+        font-size: 1.1rem;
+        margin: 1.25rem 0 0.5rem 0;
+    }
+    
+    /* Improve mobile image handling */
+    .project-content img:not(figure img) {
+        margin: 1.5rem auto;
+        max-width: calc(100% + 2rem);
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0;
+    }
+    
+    .project-content figure.content-image {
+        margin: 1.5rem -1rem;
+    }
+    
+    .project-content figure.content-image img {
+        border-radius: 0;
+        max-width: calc(100% + 2rem);
+    }
+}
+
+/* Additional mobile breakpoint for very small screens */
+@media (max-width: 480px) {
+    .project-single {
+        padding: 0.75rem;
+    }
+    
+    .project-content {
+        font-size: 0.95rem;
+    }
+    
+    .project-single .project-title {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+    
+    .project-single .project-subtitle {
+        font-size: 1rem;
     }
 }
 
@@ -536,6 +597,27 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-radius: 6px;
     overflow: hidden;
+}
+
+/* Mobile-responsive table wrapper */
+.project-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .project-content table {
+        font-size: 0.8rem;
+        margin: 1rem -1rem; /* Extend to screen edges on mobile */
+        border-radius: 0;
+    }
+    
+    .project-content table th,
+    .project-content table td {
+        padding: 8px 12px;
+        min-width: 80px; /* Ensure minimum column width */
+    }
 }
 
 .project-content table th {

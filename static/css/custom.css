@@ -55,3 +55,104 @@ footer {
 
 /* Import Projects Styles */
 @import url('./projects.css');
+
+/* Mobile-first responsive design improvements */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure all content respects viewport width */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Universal table responsiveness */
+table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+        border: 0;
+    }
+    
+    table thead {
+        display: none;
+    }
+    
+    table tr {
+        display: block;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 6px;
+    }
+    
+    table td {
+        display: block;
+        text-align: left !important;
+        border: none;
+        padding: 5px 0;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+    }
+    
+    table td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scrolling on mobile */
+@media (max-width: 768px) {
+    #content {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* Ensure code blocks don't overflow */
+    pre, code {
+        overflow-x: auto;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    
+    /* Better mobile navigation */
+    #nav {
+        padding: 0.5rem 1rem;
+    }
+    
+    #nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    #nav li {
+        margin: 0.25rem 0;
+    }
+}
