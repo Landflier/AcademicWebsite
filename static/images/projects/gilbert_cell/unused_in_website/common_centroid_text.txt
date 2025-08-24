@@ -1,0 +1,21 @@
+Table 13.2
+
+The five rules of common-centroid layout for MOS transistors.
+
+ 
+
+1. COINCIDENCE: The centroids of the matched MOS transistors should coincide at least approximately. Ideally, the centroids
+should exactly coincide.
+
+2. SYMMETRY: The array should be symmetric around both the horizontal and vertical axes.
+
+3. DISPERSION: When possible, a large array should be subdivided into as many smaller arrays as possible that each satisfy
+the rules of coincidence and symmetry. If this can be achieved, then the larger array need not satisfy these rules; only the
+subarrays that comprise it need do so.
+
+4, COMPACTNESS: The array (or each of its subarrays) should be as compact as possible.
+
+5. ORIENTATION: Matched MOS transistors should possess equal orientations.
+
+ 
+

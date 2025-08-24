@@ -1,0 +1,20 @@
+ 
+
+Table 13.3
+
+Sample interdigitation patterns for MOS transistors with common source connection.
+
+ 
+
+1. (pAsBpBsA)'p
+
+2. (sADA)'(sBpB)’(sApA)'s
+
+3. (sApAsBpBsApA)',
+
+4. (sApAsBp-s ApAs-p BsApA)'s
+
+5. (sADAsBpBsCpC)'s(CpCsBpBsApAs)'
+
+ 
+
