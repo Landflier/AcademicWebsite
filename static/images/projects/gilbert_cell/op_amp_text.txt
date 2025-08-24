@@ -1,0 +1,12 @@
+OpAmp
+
++ +
+vi AV vi GV
+— —
+
+* High voltage gain * High “voltage” gain
+* High input impedance —« _High input impedance
+
+¢ Voltage source output ¢ Current source output
+(low impedance) (high impedance)
+

@@ -210,14 +210,14 @@ text {font-family: Sans-Serif;}
      id="text1"
      y="65.804443"
      x="421.07703"
-     style="fill:#888800;fill-opacity:1;font-size:18.66666667px">f_LO = 100 MHz</text><text
+     style="fill:#888800;fill-opacity:1;font-size:18.66666667px;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">f_LO = 100 MHz</text><text
      fill="#cccccc"
      xml:space="preserve"
      font-size="20.7085px"
      id="text2"
      y="347.08368"
      x="387.95386"
-     style="fill:#239901;fill-opacity:1;font-size:18.66666667px">f_RF = 89.7 MHz</text><g
+     style="fill:#239901;fill-opacity:1;font-size:18.66666667px;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">f_RF = 89.7 MHz</text><g
      id="g1"
      style="fill:#00ccee;fill-opacity:1"
      transform="translate(-23.372217,136.33473)"><text
