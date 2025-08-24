@@ -73,54 +73,99 @@ body {
     -ms-text-size-adjust: 100%;
 }
 
-/* Universal table responsiveness */
-table {
-    max-width: 100%;
+/* Table responsiveness using wrapper approach */
+.table-responsive {
+    width: 100%;
     overflow-x: auto;
-    display: block;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    background: white;
+}
+
+table th,
+table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
     white-space: nowrap;
 }
 
+table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+table tr:hover {
+    background: #f7fafc;
+}
+
+
+/* Mobile-specific table styling */
 @media (max-width: 768px) {
+    .table-responsive {
+        margin: 1rem 0; /* Keep centered with content on mobile */
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        border: 1px solid #e2e8f0;
+        position: relative;
+    }
+    
     table {
         font-size: 0.85rem;
-        border: 0;
+        min-width: 800px; /* Ensure table maintains readable width and prevents clipping */
+        table-layout: auto;
     }
     
-    table thead {
-        display: none;
-    }
-    
-    table tr {
-        display: block;
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        padding: 10px;
-        background: #f9f9f9;
-        border-radius: 6px;
-    }
-    
+    table th,
     table td {
-        display: block;
-        text-align: left !important;
-        border: none;
-        padding: 5px 0;
-        position: relative;
-        padding-left: 50%;
-        white-space: normal;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        overflow: visible;
     }
     
-    table td:before {
-        content: attr(data-label) ": ";
-        position: absolute;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-        font-weight: bold;
-        color: #333;
+    /* Ensure first column has enough space */
+    table th:first-child,
+    table td:first-child {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        min-width: 150px !important;
+        width: 150px;
+    }
+    
+    /* Specific fix for project content tables */
+    .project-content table th:first-child,
+    .project-content table td:first-child {
+        padding-left: 40px !important;
+        padding-right: 24px !important;
+        min-width: 160px !important;
+        width: 160px !important;
+    }
+    
+    table th {
+        background: #2c5282;
+        color: white;
+        font-size: 0.85rem;
+        font-family: inherit;
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: 600;
     }
 }
+
+
 
 /* Responsive images */
 img {

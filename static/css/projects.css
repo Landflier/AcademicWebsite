@@ -510,22 +510,25 @@
         margin: 1.25rem 0 0.5rem 0;
     }
     
-    /* Improve mobile image handling */
+    /* Improve mobile image handling - keep within bounds */
     .project-content img:not(figure img) {
         margin: 1.5rem auto;
-        max-width: calc(100% + 2rem);
-        margin-left: -1rem;
-        margin-right: -1rem;
-        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
     }
     
     .project-content figure.content-image {
-        margin: 1.5rem -1rem;
+        margin: 1.5rem 0;
+        max-width: 100%;
     }
     
     .project-content figure.content-image img {
-        border-radius: 0;
-        max-width: calc(100% + 2rem);
+        border-radius: 6px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -599,24 +602,13 @@
     overflow: hidden;
 }
 
-/* Mobile-responsive table wrapper */
-.project-content table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
+/* Mobile-responsive tables - Direct CSS approach */
 @media (max-width: 768px) {
     .project-content table {
-        font-size: 0.8rem;
-        margin: 1rem -1rem; /* Extend to screen edges on mobile */
+        margin: 1rem -2rem; /* Extend beyond project content padding */
         border-radius: 0;
-    }
-    
-    .project-content table th,
-    .project-content table td {
-        padding: 8px 12px;
-        min-width: 80px; /* Ensure minimum column width */
+        border-left: none;
+        border-right: none;
     }
 }
 

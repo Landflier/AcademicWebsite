@@ -1,6 +1,6 @@
 ---
 title : "Blog"
-date : 2024-12-21"
+date : "2024-12-21"
 type : "blog"
 layout : "list"
 ---

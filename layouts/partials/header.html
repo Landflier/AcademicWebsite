@@ -69,6 +69,16 @@
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 
     </script>
+    
+    <!-- Mobile-only table responsiveness script -->
+    <script>
+      // Only load table wrapper script on mobile devices
+      if (window.innerWidth <= 768 || /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        var script = document.createElement('script');
+        script.src = '/js/mobile-table-wrapper.js';
+        document.head.appendChild(script);
+      }
+    </script>
   </head>
 
   <body>
