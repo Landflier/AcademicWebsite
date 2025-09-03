@@ -42,11 +42,39 @@ $$
 
 In this derivation we have ignored the non-linearity of the mixer, thus omitting the higher order harmonics. These harmonics will become important when we discuss the linearity of the mixer. 
 
-As can be seen from equation (1), the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega_{LO} \pm \omega_{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms. But we will try to keep the math to a minimum here...
+Equation (1) demonstrates that the mixer produces two sine waves, at the frequencies $\omega_{IF}=\omega_{LO} \pm \omega_{RF}$. This property of the mixer can also be seen from a Fourier perspective, using the fact that the Fourier transform of a product of two functions is the convolution of their Fourier transforms. But we will try to keep the math to a minimum here...
+
+A mixer is a non-linear circuit (as it includes MOSFETs, which are non-linear circuit elements), and thus its operation can be approximated by a sum of powers (ignoring higher order effects) [1]:
+$$
+\begin{equation}
+y(t) \approx \alpha_1 x(t)+\alpha_2 x^2(t)+\alpha_3 x^3(t) \tag{3}
+\end{equation}
+$$
+Note that this is not a Taylor expansion, but rather a fit of a part of the signal of interest.
+
+For a sine input, $x(t)=A \cos \omega\textit{t}$, substituting into the power series from Eq.(3), we get:
+
+$$
+\begin{align}
+y(t) & =\alpha_1 A \sin \omega t+\alpha_2 A^2 \sin ^2 \omega t+\alpha_3 A^3 \sin ^3 \omega t \nonumber \newline
+& =\alpha_1 A \sin \omega t+\frac{\alpha_2 A^2}{2}(1-\cos 2 \omega t)+\frac{\alpha_3 A^3}{4}(3 \sin \omega t+\sin 3 \omega t) \nonumber \newline
+& =\frac{\alpha_2 A^2}{2}+\left(\alpha_1 A+\frac{3 \alpha_3 A^3}{4}\right) \sin \omega t+\frac{\alpha_2 A^2}{2} \sin 2 \omega t+\frac{\alpha_3 A^3}{4} \sin 3 \omega t \tag{4}
+\end{align}
+$$
+
+Now, it is much clearer to see, that for a sinusioidal input, a nonlinear system will produce higher harmonic outputs. 
+
+Using a bit of imagination and the lesson we learned from the Eq.(4), it is easier to see that a mixer (being a non-linear system) will produce higher harmonics besides the fundamentals. Several mixer specifications describe how much and under what conditions these undesireable higher harmonics become important. 
+
+The Input P1dB is the input power (in dBm), at which the higher harmonics reduce the expected linear output characteristic by 1dB. Although not exact, an interpretation for the P1dB metric can be the following: what power do I need to give the input signal, in order for the higher harmonics to become 'more significant' in the output than the fundamentals.
+
+#### References
+
+[1] B. Razavi, *RF Microelectronics*, 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2012, eq. 2.25.
 
 ### Target specifications
 
-In the table below we have given the metrics we aim to achieve in this project. The simulation and future measurement values are included for easy comparison.
+The target specification of the project are given in the table below. Alongside theses specs, simlation results from ngspice are included for comparison.
 | Metric | Target | Simulation | Measured |
 |--------|:------:|:----------:|:--------:|
 | RF frequency | $89.3\text{MHz}$ | $89.3\text{MHz}$ | - |
@@ -64,7 +92,7 @@ In the table below we have given the metrics we aim to achieve in this project. 
 In our workflow we used Xschem for creating the schematics, and a python notebook for gm/ID transistor sizing.
 
 ### Gilbert cell
-![Schematic of the Gilbert cell mixer, implemented in Xschem](/images/projects/gilbert_cell/Gilbert_cell_no_hierarchy_editted.svg)
+![Schematic of the Gilbert cell mixer, implemented in Xschem](/images/projects/gilbert_cell/Gilbert_cell_hierarchal.svg)
 
 #### Transistor sizing
 For the transistor sizing, we chose to use the gm/ID methodology. The RF
@@ -75,7 +103,7 @@ selected to operate more towards the linear triode region, but still in
 moderate inversion, with a gm/Id=15. Higher gm/ID was avoided in order to avoid
 having too big devices and sacrificing some of the transistor's ft (although
 the frequency response is a smaller issue, since we are working in the FM
-broadcasting band). For the sizing, a [Jupyter notebook for gm/ID transistor sizing](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Gilbert_cell.ipynb) was used. The gm/ID calculation vs the simulation results are given in the table below:
+broadcasting band). The sizing calculations were done using the `pygmid` python library, within a [Jupyter notebook](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Gilbert_cell.ipynb). The gm/ID calculation vs the simulation results are given in the table below:
 
 | Source | Transistor | gm/ID | gm(mS) | ID(uA) |  W(μm) | ft(GHz) | VGS(V) | VDS(V) |
 |------|-------|:------:|:-------:|:--------:|:------:|:-------:|:-----:|:-----:|
@@ -91,12 +119,6 @@ Note the calculation results depend on the 'nf' that was used in the simulations
 
 \* These fT values (14.34 GHz and 5.28 GHz) shouldn't be trusted, since 'cgso' and 'cgdo' .op values were zero in the simulation. This means the capacitance of the G,D and S terminals are off.
 
-#### Notes to self
-
-- **Problem**
-Although the circuit is working, I am still having trouble understanding the regions of operation of the MOSFETs. For the LO devices, they should be operating as switches, however they are also hogging the entire voltage headroom. I.e VDS~2.5V for the LOs, and for the RF devices, VDS~0.1-0.3 (depending on what part of the LO cycling the transistor is in). Thus, aren't the RF FETs operating in the triode region? For both the LO and RF transistors, VGS>Vth, but for the LO VDS>VGS-Vth (i.e transistor is in saturation), but for the RF, VDS is less than VGS-Vth (i.e linear, triode region).
-- **Solution**:
-Could it that the the transistors are not biased correctly? To reproduce the problem the waveforms used are V_CM_rf = 1.2V, V_amp_rf=0.2V, V_CM_lo=1.2V, V_amp_lo=0.2V. Try increasing V_CM_lo, to bias the LO transistors further into saturation, forcing the VDS_lo drop to be higher across the LO transistors (so that the load network formed by the two resistors does not hog all the voltage)
 
 #### References
 
@@ -107,11 +129,27 @@ Could it that the the transistors are not biased correctly? To reproduce the pro
 [3] "Lecture Notes on Nanotransistors," Purdue University, edX Course Materials, 2021. [Online]. Available: https://courses.edx.org/asset-v1:PurdueX+69504x+1T2021+type@asset+block@LNS_Lecture_Notes_on_Nanotransistors.final.pdf
 
 ### Biasing network
-For the biasing network, we decided to pass in ~100uA current into a one of the chip pins, and copy that current to the mixer biasing branches and the impedance matching network using simple current mirrors. This approach was attractive for its simplicity and straightforward implementation.
+The biasing network we decided to use makes use of one PMOS current mirror to produce a biasing current, which is then distributed among three identical NMOS current mirrors. This topology provides robustness in biasing parts of the chip which are physically far aprat, for which the connecting wiring can be long. By locally providing a bias current from a current mirror, this wiring length is no longer a significant contributor to mismatches.
 
-![Schematic of the biasing network, implemented in Xschem](/images/projects/gilbert_cell/interdigited_design.png)
+Conected to the common gate of the tranistors in the current mirrors is a docupling capacitor, which reduces the noise in the VGS voltage.
 
-To bias the 5T-OTA buffer connected to the output of the Gilbert mixer's IF port, we decided to use a Wilson current mirror. The main reason was improving the CMRR of the OTA. [2]
+![(a) PMOS current mirror, (b) NMOS current mirror.](/images/projects/gilbert_cell/PMOS_and_NMOS_Cmirror.svg)
+![Entire biasing network, composed of a PMOS mirror connected to the chip pad, and 3 NMOS mirrors distribtuing the current across the Gilbert mixer and the 5T-OTA](/images/projects/gilbert_cell/Biasing_network.svg)
+
+#### Transistor sizing
+The input current is designed to be ~10uA. The PMOS current mirror should output 30uA (since the wire carrying the PMOS mirror currend Id can be long, a rule of thumb is to use 10s of uA drive across it), equally divided across the parallel NMOS current mirrors. Current mirrors 1 and 2 should provide ~50uA bias current for the Gilbert mixer. Current mirror 3 is to provide ~30uA bias current for the 5T-OTA.
+
+First, each of the current mirrors was sized with its own testbench. Below are the results using gm/Id sizing, obtained from [this jupyter notebook](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Local_mirrors.ipynb):
+
+| Source | Mirror | gm/ID | gm(mS) | ID(uA) |  L(μm) |  W(μm) | VGS(V) | VDS(V) |
+|------|-------|:------:|:-------:|:--------:|:------:|:------:|:-----:|:-----:|
+| Calculation (nf=1) | PMOS | 6 | 0.06 | 10 | 0.4 | 2.15 | 1.06 | 1.65 |
+| Simulation (nf=1)  | PMOS | 5.6 | 0.056 | 10 | 0.4 | 2 | 1.08 | 1.08 |
+| Calculation (nf=1) | NMOS | 6 | 0.06 | 10 | 1.0 | 1.5 | 0.97 | 1.65 |
+| Simulation (nf=1)  | NMOS | 5.7 | 0.057 | 10 | 1.0 | 1.5 | 0.99 | 0.99 |  
+
+Then, the entire biasing network was simulated, with some test resistances connected to the current bias outputs. 
+
 
 #### References
 
@@ -145,7 +183,6 @@ Current flows laterally across a CMOS (i.e from a typical Manhattan layout, righ
 
 ![Figure 13.57 from [1], example of interdigited design. This design can be labeled as dAsBdBsAD ](/images/projects/gilbert_cell/interdigited_design.png)
 
-![Figure 13.58 from [1], illustration of the 'tilted implants'. ](/images/projects/gilbert_cell/tilted_implant.png)
 
 3. Common centroid design
 
@@ -177,12 +214,12 @@ The main consideration when doing a common centroid design are:
 Refer to [2]- auto-zeroing and chopper stabilization (not used in this project). 
 
 ### Gilbert cell
-As a start, we provide an estimate of the area of the project. The layout was generated and measured using Magic VLSI.
+All of the layout was generated using the gLayout framework. The Gilbert mixer was generated using [this python script](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/python/Gilbert_mixer/Gilbert_mixer.py). The layout is given below:
 
 
-![Area estimation of the Gilbert cell, plus supporting circuitry. The length estimation was done using Magic VLSI.](/images/projects/gilbert_cell/Gilbert_area_estimation.svg)
+![LVS and DRC clean layout of the Gilbert mixer.](/images/projects/gilbert_cell/Gilbert_cell_transistors.png)
 
-We note that this layout does not include dummy devices, no interdigitation is implemented (which would reduce the area), and no biasing network are included. Thus, we estimate the actual design to be around $60\textit{ um}x60\textit{ um}$, for a total area of $3600 um^2$.
+In this layout implementation, the floorplan is divided into three differential pairs. Each pair is surronded by a guard ring. For each transistor within a differential pair, dummy devices are used to ensure better matching. The signals between the differential pairs are routed as much as possible outside the differential pair structures to reduce capacitive coupling and signal interference.
 
 #### References:
 
@@ -193,7 +230,9 @@ We note that this layout does not include dummy devices, no interdigitation is i
 [3] "Optimizing Analog Layouts: Techniques for Effective Layout Matching," Design & Reuse. [Online]. Available: https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
 
 ### Biasing network
-For the biasing network, we have decided to pass 100uA of current through the bondbands and then, using current mirrors, to distribute 50uA to each of branches of the RF differential pair.
+We subdivided the 
+
+### Impedence matching stage
 
 ## Verification & Analysis
 ### Gilbert cell
@@ -203,8 +242,11 @@ Below are given waveforms for the output of the Gilbert mixer, in both the time 
 ![Frequency spectrum of the mixer, with $f_{LO}=100MHz$ and $f_{RF}=89.3MHz$.](/images/projects/gilbert_cell/FFT_editted.svg)
 ### Impedence matching (5T-OTA)
 ### Biasing network
+Simulating the output of the biasing network was straighforward, using a 1ns transient simulation in ngspice. The output currents are annoted using a ammeter xschem symbol. The resistors are present in orer to measure the output current across some load.
+![Simulation of the biasing network with $1k\Omega$ loading at each of the output ports.](/images/projects/gilbert_cell/Biasing_network_tb.svg)
 ### Top level
 
+![Simulation testbench for the top level of the design](/images/projects/gilbert_cell/Gilbert_cell_hierarchal_tb.svg)
 ## Testing results
 The following testing equipment will be used to measure the mixer performance:
 - Vector Network Analyzer (VNA) : Measures insertion loss, return loss, and isolation.
@@ -238,6 +280,14 @@ Open Source Silicon Community, "In Xschem, when using such a symbol, the nf one 
 After a short discussion on the FOSSi Element chat, Tim Edwards has changed the Magic-VLSI generators to conform to the BSIM4 convention, that W is the total width, nf is the number of fingers, and thus each finger has a length W/nf. 
 I have also pushed a pull request to the gLayout github repository to conform to this convention too, since the generators in gLayout were not adhering to it.
 
+#### Some circuit design notes
+
+####  Gilbert mixer
+
+- **Problem**
+Although the circuit is working, I am still having trouble understanding the regions of operation of the MOSFETs. For the LO devices, they should be operating as switches, however they are also hogging the entire voltage headroom. I.e VDS~2.5V for the LOs, and for the RF devices, VDS~0.1-0.3 (depending on what part of the LO cycling the transistor is in). Thus, aren't the RF FETs operating in the triode region? For both the LO and RF transistors, VGS>Vth, but for the LO VDS>VGS-Vth (i.e transistor is in saturation), but for the RF, VDS is less than VGS-Vth (i.e linear, triode region).
+- **Solution**:
+Could it that the the transistors are not biased correctly? To reproduce the problem the waveforms used are V_CM_rf = 1.2V, V_amp_rf=0.2V, V_CM_lo=1.2V, V_amp_lo=0.2V. Try increasing V_CM_lo, to bias the LO transistors further into saturation, forcing the VDS_lo drop to be higher across the LO transistors (so that the load network formed by the two resistors does not hog all the voltage)
 
 ## Chipathon 2025 Initiative
 
