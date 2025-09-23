@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="main-page-container">
+  <header class="main-page-header about-header">
+    <div class="about-title-section">
+      <h1 class="main-page-title">{{ .Title }}</h1>
+      {{ if .Date }}
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ end }}
+    </div>
+    <div class="about-profile-image">
+      <img src="/images/about/personal_picture.jpg" alt="Vasil R Yordanov">
+    </div>
+  </header>
+  
+  <div class="main-page-content">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

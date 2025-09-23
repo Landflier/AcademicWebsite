@@ -173,6 +173,48 @@ img {
     height: auto;
 }
 
+/* About page header - text area unchanged */
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.about-title-section {
+    /* Text stays exactly as it was */
+}
+
+.about-profile-image {
+    position: absolute;
+    top: -2rem; /* Move higher up */
+    left: -370px; /* Way outside the text area on the left */
+    z-index: 1;
+    display: none; /* Hide image but keep all formatting */
+}
+
+.about-profile-image img {
+    width: 290px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .about-profile-image {
+        position: static;
+        margin: 1rem auto 0;
+    }
+    
+    .about-profile-image img {
+        width: 180px;
+        height: 180px;
+        clip-path: circle(50%); /* Simple circle on mobile */
+    }
+}
+
 /* Prevent horizontal scrolling on mobile */
 @media (max-width: 768px) {
     #content {

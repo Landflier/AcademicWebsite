@@ -4,47 +4,21 @@ layout: "single"
 type: "about"
 ---
 
-As Tracy Letts says in The Big Short, welcome to my academic 'dinky webpage'. My academic interests are in Condensed Matter Physics. Currently, for my hobby I am getting into HAM (not the food), and experimenting with designing and taping out analog/RF integrated circuits. 
+As Tracy Letts says in The Big Short, welcome to my academic 'dinky webpage'. My academic interests are in Condensed Matter Physics. Currently, for my hobby I am getting into HAM (not the food), and experimenting with designing and taping out analog/RF integrated circuits.
 
-## Education
+## Background
 
-- MSc Semiconductors and Microelectronics, Purdue University, 2025
-- M1 Genral Physics, University Paris-Saclay, 2023
-- BSc Theoretical Physics, University of Glasgow, 2022
+I'm a recent graduate (MSc Semiconductors and Microelectronics, Purdue University, 2025). My academic journey wasn't the most linear, but just like my interests, it was diverse and incredibly rewarding. My current focus is lithographic reserach, but I am incredibly curious about RF and analog chip design, radars, and system design. I try to practice the latter in my spare time, when my ideas about physics and lithography dry up.
 
-## Work experience
-I graduated recently (May 2025), and have decided to pursue a PhD. Throughout my university years I proactivaly looked for opportunities to conduct Solid-State Physics related research. Below I have summerized my most recent positions:
+Besides my academic interests, I enjoy reading philosophy (which I discuss with a friend of mine), watching movies, and practicing any possible physical activity. 
 
-imec, 03.2024 - 09.2024
-Department of Experimental Materials and Material Transfer
+## Current Interests
 
-Project: Polymer residue cleaning from 2D materials
-Supervisor: Dr. Jean-Francois de Marneffe
-Research and responsibilities: 
-Developed rigorous testing protocols to compare plasma etching and UV curing 
-Proactively sought to expand the cross-team collaborations to explore different approaches
-Created my own automation scripts for experiment description and book-keeping using JS and Obsidian 
+- **Research Focus:** Condensed matter physics, semiconductor device physics
+- **Hobby Projects:** HAM radio, analog/RF integrated circuit design and tape-out
+- **Open Source:** Contributing to IC design tools and methodologies
 
-imec, 04.2023 - 09.2023
-Department of Experimental Photolithography Materials, MSc project
-
-Project: EUV electronic processes in photoresists
-Supervisors: Dr. Roberto Fallica, Prof Stefano Nannarone
-Research and responsibilities:
-Collaborated with chemists and physicists to understand and improve the in-house model
-Wrote extensive project and code documentation using Jekyll
-
-CNRS
-C2N, research internship
-
-Project: MEMS transducer for wireless power transfer in medical implants
-Supervisor: Prof. Elie Lefeuvre
-Research and responsibilities: 
-compared Terfenol-D and Galfenol in terms of device power
-designed a novel Bayesian methodology to consolidate findings
-wrote Python code to automate the experimental process
-
-Some of my other jobs include part-time teaching at a local school, and interning at GlobalFoundries.
+For a detailed overview of my work experience and technical skills, please see my [Resume](/resume/).
 ## Contact
 You can most easily reach me on LinkedIn or on Element
 
