@@ -137,7 +137,7 @@ Conected to the common gate of the tranistors in the current mirrors is a docupl
 ![Entire biasing network, composed of a PMOS mirror connected to the chip pad, and 3 NMOS mirrors distribtuing the current across the Gilbert mixer and the 5T-OTA](/images/projects/gilbert_cell/Biasing_network.svg)
 
 #### Transistor sizing
-The input current is designed to be ~10uA. The PMOS current mirror should output 30uA (since the wire carrying the PMOS mirror currend Id can be long, a rule of thumb is to use 10s of uA drive across it), equally divided across the parallel NMOS current mirrors. Current mirrors 1 and 2 should provide ~50uA bias current for the Gilbert mixer. Current mirror 3 is to provide ~30uA bias current for the 5T-OTA.
+The input current is designed to be ~10uA. The PMOS current mirror should output 30uA (since the wire carrying the PMOS mirror currend Id can be long, a rule of thumb is to use 10s of uA drive across it), equally divided across the parallel NMOS current mirrors. Current mirrors 1 and 2 should provide ~50uA of biasing to each of the branches of the Gilbert mixer; current mirror 3 should provide around 30uA bias current for the 5T-OTA; and current mirror 4 should provide around 60uA biasing to the output stage.
 
 First, each of the current mirrors was sized with its own testbench. Below are the results using gm/Id sizing, obtained from [this jupyter notebook](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/jupyter_notebooks/gmId/sizing_Local_mirrors.ipynb):
 
