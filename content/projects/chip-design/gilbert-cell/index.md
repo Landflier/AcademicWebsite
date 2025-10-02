@@ -148,8 +148,7 @@ First, each of the current mirrors was sized with its own testbench. Below are t
 | Calculation (nf=1) | NMOS | 6 | 0.06 | 10 | 1.0 | 1.5 | 0.97 | 1.65 |
 | Simulation (nf=1)  | NMOS | 5.7 | 0.057 | 10 | 1.0 | 1.5 | 0.99 | 0.99 |  
 
-Then, the entire biasing network was simulated, with some test resistances connected to the current bias outputs. 
-
+Then, the entire biasing network was simulated, with some test resistances connected to the current bias outputs, to measure the output current.
 
 #### References
 
@@ -160,16 +159,18 @@ Then, the entire biasing network was simulated, with some test resistances conne
 ### Impedance matching stage
 
 ![Schematic of the input matching network, implemented in Xschem](/images/projects/gilbert_cell/5T-OTA-buffer_no_hierarchy.svg)
-In order to test our circuit, we will need to attach a probe (oscilloscope, VNA) to the IF output pin of our chip. This probe will load the mixer, which has a low impedance output $R_{load} \parallel $. Therefore, to make testing possible, avoiding loading and reflecting signals, we need to design an impedance matching network, to serve as a buffer between the mixer and the testing probe. 
-We decided to use a 5T-OTA, for its simplicity, high output impedance (current source) and differential to single ended output. A nice review/introduction for OpAmps vs OTAs, see [1] in this section's references.
-The probe model we used in our test benches for the OTA setup, taken from a standard supplier's documentation: 
+In order to test our circuit, we will need to attach a probe (oscilloscope, VNA) to the IF output pin of our chip. This probe will load the mixer with a capacitive load $~10pF$. To not load the mixer directly, since it cannot drive the capcitance, we needed to design an output buffer. That consisted of a simple four-transitor (technically 5T, including the current biasing transistor) OTA stage, the output of which is connected to a cascaded CD-into-diode connected CD stage. 
 
-![Schematic of the input matching network, implemented in Xschem](/images/projects/gilbert_cell/Osciloscope_probe.svg)
+The design was then tested with a $10pF$ loading capcitor. 
 
 #### References
 https://people.engr.tamu.edu/spalermo/ecen474/lecture11_ee474_simple_ota.pdf
 
 ![Operational Amplifier vs Operational Trans-amplifier as an impedance matching stage. Image taken from [1]](/images/projects/gilbert_cell/Op_Amp_vs_OTA.svg)
+
+### Secondary ESD cell
+
+
 ## Layout Implementation
 In RF and analog layout, device matching is paramount for the correct operation of the circuits. Below, we have included some tidbits and pictures on transistor layout matching:
 
@@ -217,10 +218,9 @@ Refer to [2]- auto-zeroing and chopper stabilization (not used in this project).
 All of the layout was generated using the gLayout framework. The Gilbert mixer was generated using [this python script](https://github.com/Landflier/Chipathon_2025_gLayout/blob/main/src/python/Gilbert_mixer/Gilbert_mixer.py). The layout is given below:
 
 
-![LVS and DRC clean layout of the Gilbert mixer.](/images/projects/gilbert_cell/Gilbert_cell_transistors.png)
+![LVS and DRC clean layout of the Gilbert mixer.](/images/projects/gilbert_cell/Gilbert_mixer_layout.png)
 
-In this layout implementation, the floorplan is divided into three differential pairs. Each pair is surronded by a guard ring. For each transistor within a differential pair, dummy devices are used to ensure better matching. The signals between the differential pairs are routed as much as possible outside the differential pair structures to reduce capacitive coupling and signal interference.
-
+The layout was generated entirely using the gLayout framework. The two LO differential pairs are interdigited, with the $(_S A_D B_S D_D C)^i$ interdigitation scheme. Due to time constraints, the RF diff pair is generated using two 'descrete' gLayout NMOS FETs, each surrounded by two dummies. 
 #### References:
 
 [1] A. Hastings, *The Art of Analog Layout*, 2nd ed. Upper Saddle River, NJ: Prentice Hall, 2006.
@@ -230,9 +230,17 @@ In this layout implementation, the floorplan is divided into three differential 
 [3] "Optimizing Analog Layouts: Techniques for Effective Layout Matching," Design & Reuse. [Online]. Available: https://www.design-reuse.com/article/61548-optimizing-analog-layouts-techniques-for-effective-layout-matching/
 
 ### Biasing network
-We subdivided the 
+For the biasing network, an entirely new generator was created in the gLayout framework, which supports interdigitation of arbitrary $\frac{W}{L}$ ratios of the reference (input) FET and the mirroring (output) FET. The generator was used to create all five of the current mirrors.
 
-### Impedence matching stage
+![LVS and DRC clean layout of an NMOS current mirror.](/images/projects/gilbert_cell/Cmirror_nmos_layout.png)
+![LVS and DRC clean layout of an PMOS current mirror.](/images/projects/gilbert_cell/Cmirror_pmos_layout.png)
+### 5T-OTA and CD-CD second stage
+Due to time constraints, the OTA and the output stages were created by hand in Magic. Magic was very enjoyable to use, and in the future, I could work more on generators in Magic, having worked with generators in gLayout :).
+
+### Secondary protection ESD cell
+According to the official GF180MCU documentation, a secondary ESD cell is necessary if the gate of a FET is directly connected to the input/output of a IO pad. The cell was laid out in Magic (and was used by other teams, which was awesome). 
+
+![LVS and DRC clean layout of the secondary ESD cell](/images/projects/gilbert_cell/ESD_cell_layout.png)
 
 ## Verification & Analysis
 ### Gilbert cell
@@ -240,13 +248,15 @@ Below are given waveforms for the output of the Gilbert mixer, in both the time 
 
 ![Time-domain simulation of the mixer, t=300ns](/images/projects/gilbert_cell/Time-series_editted.svg)
 ![Frequency spectrum of the mixer, with $f_{LO}=100MHz$ and $f_{RF}=89.3MHz$.](/images/projects/gilbert_cell/FFT_editted.svg)
-### Impedence matching (5T-OTA)
+
 ### Biasing network
 Simulating the output of the biasing network was straighforward, using a 1ns transient simulation in ngspice. The output currents are annoted using a ammeter xschem symbol. The resistors are present in orer to measure the output current across some load.
 ![Simulation of the biasing network with $1k\Omega$ loading at each of the output ports.](/images/projects/gilbert_cell/Biasing_network_tb.svg)
+
 ### Top level
 
-![Simulation testbench for the top level of the design](/images/projects/gilbert_cell/Gilbert_cell_hierarchal_tb.svg)
+![Top-level transient simulation with PEX extracted Gilbert mixer, 10pF loading capacitance, and secondary ESD cells connected to the signal inputs ](/images/projects/gilbert_cell/Time-series_top_level_PEX.svg)
+![FFT of above simulation. The green one is the output at the loaded end, the purple and dark-blue traces are the outputs at the mixer outputs, and the teal one is the output of the OTA.](/images/projects/gilbert_cell/FFT_top_level_PEX.svg)
 ## Testing results
 The following testing equipment will be used to measure the mixer performance:
 - Vector Network Analyzer (VNA) : Measures insertion loss, return loss, and isolation.
