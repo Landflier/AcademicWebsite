@@ -159,7 +159,7 @@ Then, the entire biasing network was simulated, with some test resistances conne
 ### Impedance matching stage
 
 ![Schematic of the input matching network, implemented in Xschem](/images/projects/gilbert_cell/5T-OTA-buffer_no_hierarchy.svg)
-In order to test our circuit, we will need to attach a probe (oscilloscope, VNA) to the IF output pin of our chip. This probe will load the mixer with a capacitive load $~10pF$. To not load the mixer directly, since it cannot drive the capcitance, we needed to design an output buffer. That consisted of a simple four-transitor (technically 5T, including the current biasing transistor) OTA stage, the output of which is connected to a cascaded CD-into-diode connected CD stage. 
+In order to test our circuit, we will need to attach a probe (oscilloscope, VNA) to the IF output pin of our chip. This probe will load the mixer with a capacitive load $~10pF$. To not load the mixer directly, since it cannot drive the capcitance, we needed to design an output buffer. That consisted of a simple four-transitor (technically 5T, including the current biasing transistor) OTA stage, the output of which is connected to a cascaded CD-CD stage. 
 
 The design was then tested with a $10pF$ loading capcitor. 
 
@@ -169,7 +169,16 @@ https://people.engr.tamu.edu/spalermo/ecen474/lecture11_ee474_simple_ota.pdf
 ![Operational Amplifier vs Operational Trans-amplifier as an impedance matching stage. Image taken from [1]](/images/projects/gilbert_cell/Op_Amp_vs_OTA.svg)
 
 ### Secondary ESD cell
+A secondary ESD cell is needed to protect agains Charge Device Model (CDM). A primary ESD for Human Body Model (HBM) was included in the padframe generator, meaning it was automatically present.
 
+The circuit of the CDM cell consists of two diodes and a resistor connected in series with the primary ESD (chip Pad), and the gate of the connected transistors.
+
+The working of the secondary ESD is the following: suppose a `large` current is discharged from the the ASIG_5p pin to the to_gate port. This causes a voltage to develop across the resistor. In the case this voltage is too low or two high, the diodes will `discharge` this voltage to either of the power rails, and the gate of the FET won't see that current (and voltage), thus protecting the gate. Remember, a diode operates when $V_CE > 0.7V$, and discharges 'any' current, regardless of what the voltage across it is (to a first approximation, given the voltage is not absurdly high/low, in which case the diode will break down).
+
+Thus, the combination of the resistor and the two diodes connected to the power rails `discharges` any high voltages or currents fed to the gate of a transistor connected to the ESD CDM protection cell.
+
+
+![Secondary ESD cell accounting for discharges from external conductors connected to the devices on the IC (like a oscilloscope probe, external resistors, capacitors).](/images/projects/gilbert_cell/ESD_secondary_protection.svg)
 
 ## Layout Implementation
 In RF and analog layout, device matching is paramount for the correct operation of the circuits. Below, we have included some tidbits and pictures on transistor layout matching:
@@ -234,6 +243,7 @@ For the biasing network, an entirely new generator was created in the gLayout fr
 
 ![LVS and DRC clean layout of an NMOS current mirror.](/images/projects/gilbert_cell/Cmirror_nmos_layout.png)
 ![LVS and DRC clean layout of an PMOS current mirror.](/images/projects/gilbert_cell/Cmirror_pmos_layout.png)
+
 ### 5T-OTA and CD-CD second stage
 Due to time constraints, the OTA and the output stages were created by hand in Magic. Magic was very enjoyable to use, and in the future, I could work more on generators in Magic, having worked with generators in gLayout :).
 
@@ -250,9 +260,22 @@ Below are given waveforms for the output of the Gilbert mixer, in both the time 
 ![Frequency spectrum of the mixer, with $f_{LO}=100MHz$ and $f_{RF}=89.3MHz$.](/images/projects/gilbert_cell/FFT_editted.svg)
 
 ### Biasing network
-Simulating the output of the biasing network was straighforward, using a 1ns transient simulation in ngspice. The output currents are annoted using a ammeter xschem symbol. The resistors are present in orer to measure the output current across some load.
+Simulating the output of the biasing network was straighforward, using a 1ns transient simulation in ngspice. The output currents are annoted using a ammeter xschem symbol. The resistors are present in order to measure the output current across some load.
 ![Simulation of the biasing network with $1k\Omega$ loading at each of the output ports.](/images/projects/gilbert_cell/Biasing_network_tb.svg)
 
+
+### Secondary ESD protection
+Below are the results of simulating the secondary CDM ESD cell's DC and AC (in series with the primary ESD).
+
+![Testbench used for the results presented below. The same net names are used in the graphs in this section.](/images/projects/gilbert_cell/ESD_secondary_protection_tb.svg)
+
+![Transient simulation of the secondary CDM ESD cell in series with the primary (PEX) extracted primary HBM ESD cell](/images/projects/gilbert_cell/ESD_DC_simulation_results.svg)
+
+For the AC simulation, a $1 k\Omega$ resistor is connected at the input of the PAD port. A test AC voltage source is connected to the other port of the resistor. 
+
+![AC simulation of the secondary CDM ESD cell in series with the primary (PEX) extracted primary HBM ESD cell, with a $1k\Omega$ resistor at the input of the PAD port.](/images/projects/gilbert_cell/ESD_AC_simulation_mag_results.svg)
+
+![Same as above, but phase plot.](/images/projects/gilbert_cell/ESD_AC_simulation_ph_results.svg)
 ### Top level
 
 ![Top-level transient simulation with PEX extracted Gilbert mixer, 10pF loading capacitance, and secondary ESD cells connected to the signal inputs ](/images/projects/gilbert_cell/Time-series_top_level_PEX.svg)

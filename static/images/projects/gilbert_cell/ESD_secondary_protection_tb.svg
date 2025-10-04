@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="200mm"
+   height="150mm"
+   version="1.1"
+   id="svg1317"
+   sodipodi:docname="ESD_secondary_protection_tb.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1321" /><sodipodi:namedview
+     id="namedview1319"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     units="mm"
+     inkscape:zoom="0.78739289"
+     inkscape:cx="372.74911"
+     inkscape:cy="300.35831"
+     inkscape:window-width="1364"
+     inkscape:window-height="755"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1317"
+     inkscape:document-units="mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"><sodipodi:guide
+       position="405.13449,-30.545459"
+       orientation="-1,0"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" /></sodipodi:namedview><style
+     type="text/css"
+     id="style681">
+.l0{
+  fill: #000000;
+  stroke: #000000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+.l1{
+  fill: #00ccee;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l2{
+  fill: #4f4f4f; fill-opacity: 0.2;
+  stroke: #4f4f4f;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l3{
+  fill: #cccccc; fill-opacity: 0.5;
+  stroke: #cccccc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l4{
+  fill: #88dd00;
+  stroke: #88dd00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l8{
+  fill: #ffff00; fill-opacity: 0.5;
+  stroke: #ffff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l9{
+  fill: #ffffff; fill-opacity: 0.5;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l10{
+  fill: #ff00ff;
+  stroke: #ff00ff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l12{
+  fill: #0000ff; fill-opacity: 0.5;
+  stroke: #0000ff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l13{
+  fill: #aaaa00; fill-opacity: 0.5;
+  stroke: #aaaa00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l14{
+  fill: #aaccaa; fill-opacity: 0.2;
+  stroke: #aaccaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l15{
+  fill: #ff7777; fill-opacity: 0.5;
+  stroke: #ff7777;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l16{
+  fill: #bfff81; fill-opacity: 0.5;
+  stroke: #bfff81;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-466.13025"
+     y="28.954597"
+     width="1920"
+     height="946"
+     id="rect683" /><style
+     type="text/css"
+     id="style1">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-1038.045"
+     y="1075.8723"
+     width="1104.0247"
+     height="500.1456"
+     id="rect1" /><style
+     type="text/css"
+     id="style1-7">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l3{
+  fill: #222222;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l6{
+  fill: #00ccee;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l7{
+  fill: #ff0000;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l8{
+  fill: #888800;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l9{
+  fill: #00aaaa;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l11{
+  fill: #00ff00;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l12{
+  fill: #0000cc;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l13{
+  fill: #666600;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l15{
+  fill: #aa2222;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l16{
+  fill: #7ccc40;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l18{
+  fill: #ce0097;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.864;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-43.004383"
+     y="16.592661"
+     width="1045.7483"
+     height="485.36194"
+     id="rect1-7" /><style
+     type="text/css"
+     id="style1-5">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l3{
+  fill: #222222;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l6{
+  fill: #00ccee;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l7{
+  fill: #ff0000;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l8{
+  fill: #888800;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l9{
+  fill: #00aaaa;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l11{
+  fill: #00ff00;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l12{
+  fill: #0000cc;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l13{
+  fill: #666600;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l15{
+  fill: #aa2222;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l16{
+  fill: #7ccc40;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l18{
+  fill: #ce0097;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.97982;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-2023.746"
+     y="947.7301"
+     width="1366"
+     height="619"
+     id="rect1-3" /><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text1"
+     x="574.14093"
+     y="155.48755"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">DVDD</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text2"
+     x="574.14093"
+     y="383.68063"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">DVSS</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text3"
+     x="464.83725"
+     y="155.48755"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">VDD</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text4"
+     x="471.06125"
+     y="383.68063"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">VSS</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text5"
+     x="143.03442"
+     y="383.68063"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">VSS</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text6"
+     x="136.81042"
+     y="155.48755"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">VDD</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text7"
+     x="8.006216"
+     y="258.1543"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">to_gate</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text8"
+     x="362.15894"
+     y="258.1543"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">asig</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="20.0239px"
+     id="text9"
+     x="707.74805"
+     y="258.1543"
+     style="stroke-width:1;fill:#00ccee;fill-opacity:1;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px">PAD</text><path
+     class="l4"
+     d="m 570.57536,219.10465 14.26231,28.52384"
+     id="path24-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 556.31305,247.62849 14.26231,-28.52384"
+     id="path25-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 556.31305,247.62849 h 28.52462"
+     id="path26-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 570.57536,247.62849 v 28.52384"
+     id="path27-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 570.57536,333.20079 v 28.52384"
+     id="path28-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 556.31305,333.20079 h 28.52462"
+     id="path29-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 570.57536,304.67695 14.26231,28.52384"
+     id="path30-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 556.31305,333.20079 14.26231,-28.52384"
+     id="path31-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 556.31305,219.10465 h 28.52462"
+     id="path32-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 556.31305,304.67695 h 28.52462"
+     id="path33-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 570.57536,190.58003 v 28.52462"
+     id="path34-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 570.57536,276.15233 v 28.52462"
+     id="path35-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     stroke-dasharray="10.2657, 10.2657"
+     d="M 427.9546,276.15233 H 656.14766"
+     id="path36-2" /><path
+     class="l4"
+     style="fill:none;stroke-width:1.13385827;stroke-dasharray:none"
+     d="m 427.9546,190.58003 h 228.19306 v 171.1446 H 427.9546 v -171.1446"
+     id="path37-6" /><path
+     class="l4"
+     d="m 171.2377,247.62849 14.26231,-28.52384"
+     id="path38-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,219.10465 14.26153,28.52384"
+     id="path39-8"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 171.2377,247.62849 h 28.52384"
+     id="path40-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,247.62849 v 28.52384"
+     id="path41-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,333.20079 v 28.52384"
+     id="path42"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 171.2377,333.20079 h 28.52384"
+     id="path43"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 171.2377,333.20079 14.26231,-28.52384"
+     id="path44"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,304.67695 14.26153,28.52384"
+     id="path45"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 171.2377,219.10465 h 28.52384"
+     id="path46"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 171.2377,304.67695 h 28.52384"
+     id="path47"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,190.58003 v 28.52462"
+     id="path48"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,276.15233 v 28.52462"
+     id="path49"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     stroke-dasharray="10.2657, 10.2657"
+     d="M 99.927712,276.15233 H 185.50001"
+     id="path50" /><path
+     class="l4"
+     d="m 242.54769,276.15233 7.13116,-14.26153"
+     id="path51"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 249.67885,261.8908 14.26231,28.52384"
+     id="path52"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="M 263.94116,290.41464 278.20347,261.8908"
+     id="path53"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="M 278.20347,261.8908 292.465,290.41464"
+     id="path54"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 292.465,290.41464 7.13115,-14.26231"
+     id="path55"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 299.59615,276.15233 h 28.52384"
+     id="path56"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 185.50001,276.15233 h 57.04768"
+     id="path57"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     style="fill:none;stroke-width:1.13385827;stroke-dasharray:none"
+     d="M 328.11999,190.58003 H 99.927712 v 171.1446 H 328.11999 v -171.1446"
+     id="path58" /><path
+     class="l5"
+     d="m 567.00979,386.68367 h 7.13115 v 7.13115 h -7.13115 z"
+     id="path59"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 567.00979,158.49061 h 7.13115 v 7.13115 h -7.13115 z"
+     id="path60"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 509.96133,386.68367 h 7.13115 v 7.13115 h -7.13115 z"
+     id="path61"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 509.96133,158.49061 h 7.13115 v 7.13115 h -7.13115 z"
+     id="path62"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 681.10593,272.58753 h 7.13115 v 7.13038 h -7.13115 z"
+     id="path63"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 395.86519,272.58753 h 7.13115 v 7.13038 h -7.13115 z"
+     id="path64"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 181.93444,158.49061 h 7.13115 v 7.13115 h -7.13115 z"
+     id="path65"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 67.837516,272.58753 h 7.131155 v 7.13038 h -7.131155 z"
+     id="path66"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 353.07904,272.58753 h 7.13115 v 7.13038 h -7.13115 z"
+     id="path67"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 181.93444,386.68367 h 7.13115 v 7.13115 h -7.13115 z"
+     id="path68"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 568.79219,160.27379 h 3.56557 v 3.56557 h -3.56557 z"
+     id="path69"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 568.79219,388.46607 h 3.56557 v 3.56558 h -3.56557 z"
+     id="path70"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 511.7445,160.27379 h 3.56558 v 3.56557 h -3.56558 z"
+     id="path71"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 511.7445,388.46607 h 3.56558 v 3.56558 h -3.56558 z"
+     id="path72"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 183.71683,388.46607 h 3.56558 v 3.56558 h -3.56558 z"
+     id="path73"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 183.71683,160.27379 h 3.56558 v 3.56557 h -3.56558 z"
+     id="path74"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 26.834388,274.36993 h 3.565499 v 3.56558 h -3.565499 z"
+     id="path75"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 725.67526,274.36993 h 3.56557 v 3.56558 h -3.56557 z"
+     id="path77"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 570.57536,162.05619 v 28.52384"
+     id="path78"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 513.5269,162.05619 v 28.52384"
+     id="path79"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="M 656.14766,276.15233 H 684.6715"
+     id="path80"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="M 399.43076,276.15233 H 427.9546"
+     id="path81"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 513.5269,361.72463 v 28.52462"
+     id="path82"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 570.57536,361.72463 v 28.52462"
+     id="path83"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 185.50001,162.05619 v 28.52384"
+     id="path84"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="M 71.403093,276.15233 H 99.927712"
+     id="path85"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 328.11999,276.15233 h 28.52462"
+     id="path86"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l7"
+     d="m 185.50001,361.72463 v 28.52462"
+     id="path87"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 684.6715,276.15233 h 42.78615"
+     id="path88"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 28.617177,276.15233 H 71.403093"
+     id="path89"
+     style="stroke-width:1.54204724;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 356.64461,276.15233 h 42.78615"
+     id="path90"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 28.617177,276.15233 v 0"
+     id="path91"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><circle
+     class="l1"
+     cx="356.64462"
+     cy="276.15231"
+     r="5.2769613"
+     id="circle91"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><circle
+     class="l1"
+     cx="399.43079"
+     cy="276.15231"
+     r="5.2769613"
+     id="circle92"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><circle
+     class="l1"
+     cx="71.403084"
+     cy="276.15231"
+     r="5.2769613"
+     id="circle93"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /></svg>
