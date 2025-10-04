@@ -1,0 +1,2561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="200mm"
+   height="100mm"
+   version="1.1"
+   id="svg1317"
+   sodipodi:docname="PMOS_and_NMOS_Cmirror.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1321" /><sodipodi:namedview
+     id="namedview1319"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     units="mm"
+     inkscape:zoom="1.1135417"
+     inkscape:cx="536.1272"
+     inkscape:cy="180.05612"
+     inkscape:window-width="1364"
+     inkscape:window-height="726"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1317"
+     inkscape:document-units="mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"><sodipodi:guide
+       position="361.95399,88.084418"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" /></sodipodi:namedview><style
+     type="text/css"
+     id="style681">
+.l0{
+  fill: #000000;
+  stroke: #000000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+.l1{
+  fill: #00ccee;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l2{
+  fill: #4f4f4f; fill-opacity: 0.2;
+  stroke: #4f4f4f;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l3{
+  fill: #cccccc; fill-opacity: 0.5;
+  stroke: #cccccc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l4{
+  fill: #88dd00;
+  stroke: #88dd00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l8{
+  fill: #ffff00; fill-opacity: 0.5;
+  stroke: #ffff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l9{
+  fill: #ffffff; fill-opacity: 0.5;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l10{
+  fill: #ff00ff;
+  stroke: #ff00ff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l12{
+  fill: #0000ff; fill-opacity: 0.5;
+  stroke: #0000ff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l13{
+  fill: #aaaa00; fill-opacity: 0.5;
+  stroke: #aaaa00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l14{
+  fill: #aaccaa; fill-opacity: 0.2;
+  stroke: #aaccaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l15{
+  fill: #ff7777; fill-opacity: 0.5;
+  stroke: #ff7777;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l16{
+  fill: #bfff81; fill-opacity: 0.5;
+  stroke: #bfff81;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.11441;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-466.13025"
+     y="28.954597"
+     width="1920"
+     height="946"
+     id="rect683"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><style
+     type="text/css"
+     id="style1">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.35709;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-1038.045"
+     y="1075.8723"
+     width="1104.0247"
+     height="500.1456"
+     id="rect1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><style
+     type="text/css"
+     id="style1-3">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+text {font-family: Sans-Serif;}
+</style><style
+     type="text/css"
+     id="style1-6">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98644;
+}
+text {font-family: Sans-Serif;}
+</style><style
+     type="text/css"
+     id="style1-4">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.48751;
+}
+text {font-family: Sans-Serif;}
+</style><style
+     type="text/css"
+     id="style1-62">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+text {font-family: Sans-Serif;}
+</style><style
+     type="text/css"
+     id="style1-625">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+text {font-family: Sans-Serif;}
+</style><style
+     type="text/css"
+     id="style1-1">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+text {font-family: Sans-Serif;}
+</style><style
+     type="text/css"
+     id="style1-2">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98664;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="-133.36221"
+     y="131.53412"
+     width="750.05157"
+     height="368.35461"
+     id="rect1-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.508px"
+     transform="matrix(0,-0.99837235,1.0016303,0,0,0)"
+     id="text1-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="-328.13727"
+     y="116.487">I_bias</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.508px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text2-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="11.804361"
+     y="43.281933">VDD</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.508px"
+     transform="matrix(0,-0.99837235,1.0016303,0,0,0)"
+     id="text3-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="-321.71539"
+     y="290.96426">I_out</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.508px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text4-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="58.810184"
+     y="167.93063">VDD</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.508px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text5-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="315.02856"
+     y="167.97061">VDD</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text6-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="210.3131"
+     y="65.560898">XC1</text><text
+     fill="#666600"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text7-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="208.27635"
+     y="91.554794">1 * 1e-6 / 1e-6</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text8-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="208.88977"
+     y="77.497536">cap_mim_1f0fF</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text6-1-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="599.97662"
+     y="249.34579">XC1</text><text
+     fill="#666600"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text7-7-8"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="599.18091"
+     y="275.47339">1 * 1e-6 / 1e-6</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text8-4-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="599.79431"
+     y="261.41608">cap_mim_1f0fF</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text9-1"
+     style="stroke-width:1"
+     x="102.37388"
+     y="192.52747">D</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text10-7"
+     style="stroke-width:1"
+     x="103.54398"
+     y="145.12881">S</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text11-1"
+     style="stroke-width:1"
+     x="105.85014"
+     y="162.86713">B</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text12-1"
+     style="stroke-width:1"
+     x="144.05682"
+     y="162.86713">G</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text13-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="32.981976"
+     y="138.23216">pfet_03v3</text><text
+     fill="#666600"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text14-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="35.309048"
+     y="153.06119">2u / 0.4u</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text16-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="134.28561"
+     y="139.87555">M_ref</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text16-4-45"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="186.52266"
+     y="347.60806">(a)</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text16-4-45-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="576.6488"
+     y="347.44434">(b)</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text17-0"
+     style="stroke-width:1"
+     x="286.96661"
+     y="192.52747">D</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text18-8"
+     style="stroke-width:1"
+     x="286.96661"
+     y="145.12881">S</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text19-5"
+     style="stroke-width:1"
+     x="284.2677"
+     y="162.86713">B</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41272px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text20-1"
+     style="stroke-width:1"
+     x="245.28159"
+     y="162.86713">G</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text21-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="314.45044"
+     y="139.88889">pfet_03v3</text><text
+     fill="#666600"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text22-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="314.45117"
+     y="153.332">6u / 0.4u</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text24-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="232.03513"
+     y="140.88391">M_mir</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text16-4-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="523.0166"
+     y="139.35077">M_ref</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2169px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text24-1-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="627.87708"
+     y="141.00958">M_mir</text><path
+     class="l4"
+     d="m 198.30754,106.52019 v 26.92026"
+     id="path24"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="M 198.30754,68.83237 V 95.75224"
+     id="path25"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 182.10291,95.75224 h 32.40926"
+     id="path26"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 182.10291,106.52019 h 32.40926"
+     id="path27"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 125.38651,141.51621 v 48.45577"
+     id="path28"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 111.88246,133.44045 v 13.45974"
+     id="path29"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 111.88246,184.588 v 13.46013"
+     id="path30"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 130.78805,149.59237 v 32.30384"
+     id="path31"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 111.88246,184.588 h 13.50405"
+     id="path32"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 111.88246,146.90019 h 8.10251"
+     id="path33"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="M 141.59114,165.74429 H 155.0948"
+     id="path34"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 119.98497,144.20839 5.40154,2.6918 -5.40154,2.69218 v -5.38398"
+     id="path35"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l4"
+     cx="136.18962"
+     cy="165.74429"
+     style="fill:none;stroke-width:1.13385827;stroke-dasharray:none"
+     id="circle35"
+     rx="5.4015431"
+     ry="5.3839736" /><path
+     class="l4"
+     d="m 271.23013,141.51621 v 48.45577"
+     id="path36"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 284.73106,133.44045 v 13.45974"
+     id="path37"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 284.73106,184.588 v 13.46013"
+     id="path38"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 265.82742,149.59237 v 32.30384"
+     id="path39"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 271.23013,184.588 h 13.50093"
+     id="path40"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 276.62894,146.90019 h 8.10212"
+     id="path41"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 241.51989,165.74429 h 13.5021"
+     id="path42-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 276.62894,144.20839 -5.39881,2.6918 5.39881,2.69218 v -5.38398"
+     id="path43-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l4"
+     cx="260.42471"
+     cy="165.74429"
+     style="fill:none;stroke-width:1.13385827;stroke-dasharray:none"
+     id="circle43"
+     rx="5.4015431"
+     ry="5.3839736" /><path
+     class="l5"
+     d="m 111.88246,262.65582 v 3.36503"
+     id="path44-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 117.284,277.46204 -5.40154,4.03788 -5.40155,-4.03788 v -7.40292 l 5.40155,-4.03827 5.40154,4.03827 v 7.40292"
+     id="path45-8"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 110.53197,261.31012 h 2.70097 v 2.69179 h -2.70097 z"
+     id="path46-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 65.294103,36.52853 h 3.376013"
+     id="path47-8"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 53.81597,41.9125 -4.051451,-5.38397 4.051451,-5.38398 h 7.427073 l 4.05106,5.38398 -4.05106,5.38397 H 53.81597"
+     id="path48-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 67.319632,35.18255 h 2.700967 v 2.69207 h -2.700967 z"
+     id="path49-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 284.73106,262.65582 v 3.36503"
+     id="path50-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 290.13378,277.46204 -5.40272,4.03788 -5.39881,-4.03788 v -7.40292 l 5.39881,-4.03827 5.40272,4.03827 v 7.40292"
+     id="path51-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 283.38331,261.31012 h 2.69941 v 2.69179 h -2.69941 z"
+     id="path52-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 195.60657,66.14058 h 5.40155 v 5.38397 h -5.40155 z"
+     id="path53-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 195.60657,130.74827 h 5.40155 v 5.38397 h -5.40155 z"
+     id="path54-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 117.284,163.05211 -5.40154,2.69218 5.40154,2.69179 v -5.38397"
+     id="path55-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 109.18188,195.35634 h 5.40154 v 5.38397 h -5.40154 z"
+     id="path56-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 152.39423,163.05211 h 5.40154 v 5.38397 h -5.40154 z"
+     id="path57-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 109.18188,130.74827 h 5.40154 v 5.38397 h -5.40154 z"
+     id="path58-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 111.79808,165.66018 h 0.16876 v 0.16822 h -0.16876 z"
+     id="path59-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 279.33225,163.05211 5.39881,2.69218 -5.39881,2.69179 v -5.38397"
+     id="path60-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 282.03166,195.35634 h 5.40271 v 5.38397 h -5.40271 z"
+     id="path61-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 238.81892,163.05211 h 5.40154 v 5.38397 h -5.40154 z"
+     id="path62-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 282.03166,130.74827 h 5.40271 v 5.38397 h -5.40271 z"
+     id="path63-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 284.64902,165.66018 h 0.16798 v 0.16822 h -0.16798 z"
+     id="path64-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 88.925804,164.3982 h 2.70097 v 2.69218 h -2.70097 z"
+     id="path65-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 304.98636,164.3982 h 2.70331 v 2.69218 h -2.70331 z"
+     id="path66-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 111.88246,198.04813 v 64.60769"
+     id="path67-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 284.73106,58.06442 v 75.37603"
+     id="path68-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 68.670116,36.52853 H 284.73106"
+     id="path69-8"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 284.73106,36.52853 V 58.06442"
+     id="path70-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 198.30754,36.52853 V 68.83237"
+     id="path71-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 284.73106,198.04813 v 64.60769"
+     id="path72-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 155.0948,165.74429 h 86.42509"
+     id="path73-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 546.69546,165.60222 h 86.42509"
+     id="path73-4-2"
+     style="fill:#0044ee;stroke:#0044ee;stroke-width:1.1647;stroke-linecap:round;stroke-linejoin:round" /><path
+     class="l1"
+     d="m 111.88246,36.52853 v 96.91192"
+     id="path74-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 90.276284,165.74429 H 111.88246"
+     id="path75-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 198.30754,133.44045 v 32.30384"
+     id="path76-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 198.30754,165.74429 v 64.60769"
+     id="path77-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 111.88246,230.35198 h 86.42508"
+     id="path78-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 284.73106,165.74429 h 21.60696"
+     id="path79-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="111.88245"
+     cy="36.528526"
+     id="circle79"
+     rx="3.9971499"
+     ry="3.9841485"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="111.88245"
+     cy="230.35199"
+     id="circle80"
+     rx="3.9971499"
+     ry="3.9841485"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="198.30756"
+     cy="165.74429"
+     id="circle81"
+     rx="3.9971499"
+     ry="3.9841485"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="198.30756"
+     cy="165.74429"
+     id="circle82"
+     rx="3.9971499"
+     ry="3.9841485"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="198.30756"
+     cy="36.528526"
+     id="circle83"
+     rx="3.9971499"
+     ry="3.9841485"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><style
+     type="text/css"
+     id="style1-49">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l1{
+  fill: #0044ee;
+  stroke: #0044ee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 2.98629;
+}
+text {font-family: Sans-Serif;}
+</style><rect
+     class="l0"
+     x="212.2343"
+     y="101.78748"
+     width="750.05157"
+     height="368.35461"
+     id="rect1-8"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.5058px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text1-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="387.92288"
+     y="302.55945">VSS</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.5058px"
+     transform="matrix(0,-0.99837235,1.0016303,0,0,0)"
+     id="text2-8"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="-47.999275"
+     y="683.71765">I_out</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.5058px"
+     transform="matrix(0,-0.99837235,1.0016303,0,0,0)"
+     id="text3-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="-47.997498"
+     y="510.17612">I_BIAS</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.5058px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text4-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="706.5979"
+     y="168.31741">VSS</text><text
+     fill="#0044ee"
+     xml:space="preserve"
+     font-size="18.5058px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text5-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#00ccee;fill-opacity:1;stroke-width:1"
+     x="453.98868"
+     y="169.10388">VSS</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text7-70"
+     style="stroke-width:1"
+     x="679.71997"
+     y="192.9675">S</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text8-3"
+     style="stroke-width:1"
+     x="679.71997"
+     y="145.57431">D</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text9-4"
+     style="stroke-width:1"
+     x="677.02496"
+     y="163.3107">B</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text10-6"
+     style="stroke-width:1"
+     x="634.62177"
+     y="161.15329">G</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2156px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text11-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="703.61676"
+     y="137.14917">nfet_03v3</text><text
+     fill="#666600"
+     xml:space="preserve"
+     font-size="11.2156px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text12-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="703.92401"
+     y="150.52563">7.5u / 1u</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text15-4"
+     style="stroke-width:1"
+     x="496.33252"
+     y="192.96573">S</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text16-43"
+     style="stroke-width:1"
+     x="495.16248"
+     y="145.57254">D</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text17-9"
+     style="stroke-width:1"
+     x="498.63882"
+     y="163.30893">B</text><text
+     fill="#ff0000"
+     xml:space="preserve"
+     font-size="8.41171px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text18-7"
+     style="stroke-width:1"
+     x="536.84149"
+     y="163.30893">G</text><text
+     fill="#222222"
+     xml:space="preserve"
+     font-size="11.2156px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text19-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="429.15201"
+     y="138.64871">nfet_03v3</text><text
+     fill="#666600"
+     xml:space="preserve"
+     font-size="11.2156px"
+     transform="scale(1.0016303,0.99837235)"
+     id="text20-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:1"
+     x="431.38519"
+     y="153.58994">1.5u / 1u</text><path
+     class="l4"
+     d="m 664.6239,141.96139 v 48.45032"
+     id="path24-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 634.91873,166.18635 h 24.30636"
+     id="path25-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 678.12873,133.88641 v 13.45857"
+     id="path26-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 678.12873,185.02812 v 13.45857"
+     id="path27-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 659.22509,150.03638 v 32.30034"
+     id="path28-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 664.6239,147.34498 h 13.50483"
+     id="path29-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 664.6239,185.02812 h 8.10212"
+     id="path30-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 672.72602,182.33672 5.40271,2.6914 -5.40271,2.69179 v -5.38319"
+     id="path31-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 518.8134,141.95961 v 48.45032"
+     id="path32-3"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 524.21416,166.18457 h 24.30441"
+     id="path33-8"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="M 505.3113,133.88463 V 147.3432"
+     id="path34-5"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 505.3113,185.02634 v 13.45857"
+     id="path35-1"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 524.21416,150.0346 v 32.30034"
+     id="path36-0"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 505.3113,147.3432 h 13.5021"
+     id="path37-8"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 510.71206,185.02634 h 8.10134"
+     id="path38-7"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 510.71206,182.33494 -5.40076,2.6914 5.40076,2.69179 v -5.38319"
+     id="path39-6"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 589.90795,235.58611 v 26.91636"
+     id="path40-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 589.90795,197.90257 v 26.91676"
+     id="path41-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 573.70527,224.81933 h 32.40692"
+     id="path42-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l4"
+     d="m 573.70527,235.58611 h 32.40692"
+     id="path43-8"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 678.12873,163.49495 -5.40271,2.6914 5.40271,2.6918 v -5.3832"
+     id="path44-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 675.42542,131.19461 h 5.40272 v 5.38359 h -5.40272 z"
+     id="path45-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 632.64908,163.49475 h 5.40271 v 5.3832 h -5.40271 z"
+     id="path46-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 675.42542,195.7949 h 5.40272 v 5.3832 h -5.40272 z"
+     id="path47-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 678.04279,166.10225 h 0.16798 v 0.16821 h -0.16798 z"
+     id="path48-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 437.12458,295.38515 h 3.37562"
+     id="path49-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 425.64762,300.76835 -4.05067,-5.3832 4.05067,-5.38358 h 7.42629 l 4.05067,5.38358 -4.05067,5.3832 h -7.42629"
+     id="path50-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 439.14972,294.03945 h 2.70057 v 2.6914 h -2.70057 z"
+     id="path51-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 678.12873,65.92147 v 3.36465"
+     id="path52-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 683.52754,54.48184 -5.39881,-4.03749 -5.40271,4.03749 v 7.40214 l 5.40271,4.03749 5.39881,-4.03749 v -7.40214"
+     id="path53-1"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 676.77708,67.94042 h 2.6994 v 2.69179 h -2.6994 z"
+     id="path54-50"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 505.3113,163.49317 5.40076,2.6914 -5.40076,2.6918 v -5.3832"
+     id="path55-8"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 502.61072,131.19283 h 5.40076 v 5.38359 h -5.40076 z"
+     id="path56-3"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 545.81799,163.49317 h 5.40076 v 5.3832 h -5.40076 z"
+     id="path57-5"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 502.61072,195.79312 h 5.40076 v 5.3832 h -5.40076 z"
+     id="path58-6"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 505.3113,65.91969 v 3.36465"
+     id="path60-99"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 499.91014,54.48006 5.40116,-4.03749 5.40076,4.03749 v 7.40214 l -5.40076,4.03749 -5.40116,-4.03749 v -7.40214"
+     id="path61-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 503.96081,67.93864 h 2.70058 v 2.69179 h -2.70058 z"
+     id="path62-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 587.20737,195.21078 h 5.40115 v 5.3832 h -5.40115 z"
+     id="path63-6"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 587.20737,259.81107 h 5.40115 v 5.38319 h -5.40115 z"
+     id="path64-3"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 698.38012,164.84065 h 2.69941 v 2.6918 h -2.69941 z"
+     id="path65-76"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l5"
+     d="m 482.35738,164.83887 h 2.70018 v 2.6918 h -2.70018 z"
+     id="path66-1"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 441.11276,295.38516 H 659.33655"
+     id="path67-5"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 678.12873,198.48669 v 96.90024"
+     id="path68-06"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 678.12873,69.28612 v 64.60029"
+     id="path70-0"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 505.3113,101.58468 v 32.29995"
+     id="path71-8"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 505.3113,198.48491 v 96.90024"
+     id="path72-1"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 505.39403,101.58468 h 61.66145"
+     id="path74-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 505.3113,69.28434 v 32.30034"
+     id="path75-6"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 589.90795,262.50247 v 32.30034"
+     id="path76-9"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 589.90795,165.60223 v 32.30034"
+     id="path77-10"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 589.90795,101.82841 v 63.7812"
+     id="path78-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 566.97863,101.58309 h 22.89451"
+     id="path79-2"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 656.52178,295.38693 h 21.60695"
+     id="path80-7"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="m 678.12873,166.18635 h 21.60305"
+     id="path81-4"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><path
+     class="l1"
+     d="M 483.70747,166.18457 H 505.3113"
+     id="path82-0"
+     style="stroke-width:1.16787;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="589.90802"
+     cy="165.60223"
+     id="circle82-3"
+     rx="3.996681"
+     ry="3.983681"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="589.90802"
+     cy="294.8028"
+     id="circle84"
+     rx="3.996681"
+     ry="3.983681"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="505.31128"
+     cy="101.58467"
+     id="circle85"
+     rx="3.996681"
+     ry="3.983681"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="505.31128"
+     cy="101.58467"
+     id="circle86"
+     rx="3.996681"
+     ry="3.983681"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="505.31128"
+     cy="295.38513"
+     id="circle87"
+     rx="3.996681"
+     ry="3.983681"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /><ellipse
+     class="l1"
+     cx="505.31128"
+     cy="101.58467"
+     id="circle88"
+     rx="3.996681"
+     ry="3.983681"
+     style="stroke-width:1.13385827;stroke-dasharray:none" /></svg>
