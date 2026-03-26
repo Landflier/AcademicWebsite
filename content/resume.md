@@ -1,7 +1,7 @@
 ---
 title: "Resume"
 layout: "single"
-type: "resume"
+type: "about"
 ---
 
 ## Education
