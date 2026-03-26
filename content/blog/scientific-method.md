@@ -1,5 +1,5 @@
 ---
-title : "Science is chaos"
+title : "Chaos reigns"
 tags : ["resesarch", "blog"]
 author : "Vasil R Yordanov"
 type : "blog"
