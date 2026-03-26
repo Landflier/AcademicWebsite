@@ -3,11 +3,25 @@
 /* Blog Layout Classes - Now using unified main-page classes */
 
 .blog-grid {
-    /* Inherits all projects-grid styles */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blog-card {
-    /* Inherits all project-card styles */
+    padding: 1.25rem 1.5rem;
+}
+
+.blog-card .project-header {
+    margin-bottom: 0.25rem;
+}
+
+.blog-card .project-meta {
+    margin-bottom: 0;
 }
 
 .blog-single {

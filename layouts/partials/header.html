@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/css/custom.css">
     
     <!-- Additional CSS for specific page types -->
-    {{ if eq .Type "projects" }}
+    {{ if or (eq .Type "projects") (eq .Type "blog") }}
     <link rel="stylesheet" href="{{ "/css/projects.css" | relURL }}">
     {{ end }}
     

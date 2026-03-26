@@ -9,45 +9,19 @@
         {{ end }}
     </header>
 
-    <div class="projects-grid blog-grid">
+    <div class="blog-grid">
         {{ range .Pages }}
         <article class="project-card blog-card">
-            <div class="project-header blog-post-header">
-                <h2 class="project-title blog-post-title">
+            <div class="project-header">
+                <h2 class="project-title">
                     <a href="{{ .Permalink }}">{{ .Title }}</a>
                 </h2>
-                {{ if .Params.subtitle }}
-                <p class="project-subtitle blog-post-subtitle">{{ .Params.subtitle }}</p>
-                {{ end }}
             </div>
-            
             <div class="project-meta blog-post-meta">
                 {{ if .Lastmod }}
                 <div class="project-date blog-post-date">{{ .Lastmod | time.Format ":date_medium" }}</div>
                 {{ end }}
                 <div class="blog-read-time">{{ .ReadingTime }} min read</div>
-            </div>
-
-            {{ if .Params.image }}
-            <div class="project-image blog-post-image">
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
-            </div>
-            {{ end }}
-
-            <div class="project-tags blog-post-tags">
-                {{ if .Params.tags }}
-                <div class="tech-tags blog-tags">
-                    {{ range .Params.tags }}
-                    <span class="tech-tag blog-tag">{{ . }}</span>
-                    {{ end }}
-                </div>
-                {{ end }}
-            </div>
-
-            <div class="project-links blog-post-links">
-                <a href="{{ .Permalink }}" class="project-link details-link blog-read-more">
-                    <span>Read More</span>
-                </a>
             </div>
         </article>
         {{ end }}
