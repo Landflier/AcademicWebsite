@@ -34,16 +34,6 @@
             </div>
             {{ end }}
 
-            <div class="project-summary blog-post-summary">
-                {{ if .Params.description }}
-                    <p>{{ .Params.description }}</p>
-                {{ else if .Summary }}
-                    {{ .Summary | truncate 200 }}
-                {{ else }}
-                    <p>{{ .Content | plainify | truncate 150 }}...</p>
-                {{ end }}
-            </div>
-
             <div class="project-tags blog-post-tags">
                 {{ if .Params.tags }}
                 <div class="tech-tags blog-tags">
