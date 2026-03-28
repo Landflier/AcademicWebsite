@@ -25,5 +25,5 @@ I have noticed, most of the problems in science and industry have become quite s
 
 ## References
 
-1. [Reference 1](https://example.com)
-2. [Reference 2](https://example.com) 
+[1] [Reference 1](https://example.com)\
+[2] [Reference 2](https://example.com)

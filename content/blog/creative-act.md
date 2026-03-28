@@ -31,7 +31,7 @@ When talking about habits, most people think of adding new behaviours to our rou
 
 ## References
 
-[1] The Creative Act, Rick Rubin, 9780593652886 
-[2] W. C. Booth, G. G. Colomb, and J. M. Williams, The Craft of Research, Third Edition (University of Chicago Press, 2009).
+[1] The Creative Act, Rick Rubin, 9780593652886\
+[2] W. C. Booth, G. G. Colomb, and J. M. Williams, The Craft of Research, Third Edition (University of Chicago Press, 2009).\
 [3] S. Firestein, Ignorance: How It Drives Science (Oxford University Press, USA, 2012).
 

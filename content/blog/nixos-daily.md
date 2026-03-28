@@ -35,5 +35,5 @@ Summarize your thoughts and possibly suggest related topics or future discussion
 
 ## References
 
-1. [Reference 1](https://example.com)
-2. [Reference 2](https://example.com) 
+[1] [Reference 1](https://example.com)\
+[2] [Reference 2](https://example.com)
