@@ -28,8 +28,14 @@
     /* Inherits all project-single styles */
 }
 
-.blog-content {
-    /* Inherits all project-content styles */
+.blog-content,
+.blog-content p,
+.blog-content li {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
 }
 
 .blog-navigation {
