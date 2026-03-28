@@ -1,6 +1,6 @@
 ---
 title : "Chaos reigns"
-tags : ["resesarch", "blog"]
+tags : ["resesarch"]
 author : "Vasil R Yordanov"
 type : "blog"
 draft: "false"
