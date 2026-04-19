@@ -24,4 +24,4 @@ You can most easily reach me on LinkedIn or on Element
 
 - LinkedIn: [https://www.linkedin.com/in/vasil-r-yordanov/](https://www.linkedin.com/in/vasil-r-yordanov/)
 - Element/Matrix (FOSSi server): [@vasil_yordanov:fossi-chat.org](https://matrix.to/#/@vasil_yordanov:fossi-chat.org) 
-- Email: vyordano [at] purdue [dot] edu
+- Email: vasilradkov.yordanov [at] student [dot] kuleuven [dot] be 
