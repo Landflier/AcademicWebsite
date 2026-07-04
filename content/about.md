@@ -2,6 +2,7 @@
 title : "About Me"
 layout: "single"
 type: "about"
+showProfileImage: true
 ---
 
 As Tracy Letts says in The Big Short, welcome to my academic 'dinky webpage'. My academic interests are in Condensed Matter Physics. Currently, for my hobby I am getting into HAM (not the food), and experimenting with designing and taping out analog/RF integrated circuits.

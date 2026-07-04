@@ -173,46 +173,31 @@ img {
     height: auto;
 }
 
-/* About page header - text area unchanged */
+/* About page header - circular photo centred above the title (About page only).
+   A simple vertical stack: identical behaviour on phones, laptops and TVs,
+   with no side-by-side layout that could break or crowd the divider. */
 .about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #e2e8f0;
-    position: relative;
-}
-
-.about-title-section {
-    /* Text stays exactly as it was */
 }
 
 .about-profile-image {
-    position: absolute;
-    top: -2rem; /* Move higher up */
-    left: -370px; /* Way outside the text area on the left */
-    z-index: 1;
-    display: none; /* Hide image but keep all formatting */
+    order: -1;                  /* photo sits above the "About Me" heading */
+    margin-bottom: 0.75rem;
 }
 
 .about-profile-image img {
-    width: 290px;
-    height: 320px;
-    object-fit: cover;
-    object-position: center 20%;
-    border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-    .about-profile-image {
-        position: static;
-        margin: 1rem auto 0;
-    }
-    
-    .about-profile-image img {
-        width: 180px;
-        height: 180px;
-        clip-path: circle(50%); /* Simple circle on mobile */
-    }
+    display: block;
+    /* Rectangular photo at its natural proportions. Fluid width scales with the
+       viewport, clamped so it stays sensible from phones (150px) to TVs (300px);
+       height follows automatically to preserve the aspect ratio. */
+    width: clamp(150px, 18vw, 300px);
+    height: auto;
 }
 
 /* Prevent horizontal scrolling on mobile */
