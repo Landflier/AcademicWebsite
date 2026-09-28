@@ -1,5 +1,6 @@
 ---
 title : "Chaos reigns"
+date : "2026-03-26"
 tags : ["resesarch"]
 author : "Vasil R Yordanov"
 type : "blog"

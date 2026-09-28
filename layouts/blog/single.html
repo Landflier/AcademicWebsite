@@ -5,28 +5,6 @@
         {{ if .Params.subtitle }}
         <p class="project-subtitle blog-post-subtitle">{{ .Params.subtitle }}</p>
         {{ end }}
-        
-        <div class="project-meta blog-post-meta">
-            {{ if .Lastmod }}
-            <div class="meta-item">
-                <strong>Last Modified:</strong> {{ .Lastmod | time.Format ":date_medium" }}
-            </div>
-            {{ end }}
-            {{ if .Params.readTime }}
-            <div class="meta-item">
-                <strong>Reading Time:</strong> {{ .Params.readTime }} minutes
-            </div>
-            {{ else }}
-            <div class="meta-item">
-                <strong>Reading Time:</strong> {{ .ReadingTime }} minutes
-            </div>
-            {{ end }}
-            {{ if .Params.author }}
-            <div class="meta-item">
-                <strong>Author:</strong> {{ .Params.author }}
-            </div>
-            {{ end }}
-        </div>
 
         {{ if .Params.tags }}
         <div class="project-technologies blog-post-tags">

@@ -1,5 +1,6 @@
 ---
 title : "Blogs of other scietists"
+date : "2026-09-27"
 tags : ["resesarch"]
 author : "Vasil R Yordanov"
 type : "blog"

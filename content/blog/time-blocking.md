@@ -1,5 +1,6 @@
 ---
 title : "A new habit"
+date : "2026-03-28"
 # tags : ["resesarch", "blog"]
 author : "Vasil R Yordanov"
 type : "blog"

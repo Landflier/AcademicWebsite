@@ -1,5 +1,6 @@
 ---
 title : "How research is a creative act"
+date : "2025-11-29"
 # tags : ["resesarch", "blog"]
 author : "Vasil R Yordanov"
 type : "blog"

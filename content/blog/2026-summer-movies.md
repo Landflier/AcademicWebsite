@@ -1,5 +1,6 @@
 --- 
 title : "My summer 2026 movie list" 
+date : "2026-09-27" 
 # tags : ["cinema", "blog"] 
 author : "Vasil R Yordanov" 
 type : "blog" 

@@ -10,7 +10,7 @@
     </header>
 
     <div class="blog-grid">
-        {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
         <article class="project-card blog-card">
             <div class="project-header">
                 <h2 class="project-title">
@@ -18,10 +18,13 @@
                 </h2>
             </div>
             <div class="project-meta blog-post-meta">
-                {{ if .Lastmod }}
-                <div class="project-date blog-post-date">{{ .Lastmod | time.Format ":date_medium" }}</div>
+                {{ if not .Date.IsZero }}
+                <div class="project-date blog-post-date">{{ .Date | time.Format ":date_medium" }}</div>
                 {{ end }}
                 <div class="blog-read-time">{{ .ReadingTime }} min read</div>
+                {{ if .Params.author }}
+                <div class="blog-post-author">{{ .Params.author }}</div>
+                {{ end }}
             </div>
         </article>
         {{ end }}
