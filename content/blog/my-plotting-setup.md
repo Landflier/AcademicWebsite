@@ -12,9 +12,8 @@ draft: "false"
 With so many options for plotting - Python libraries such
 as matplotlib and seaborn; R; Julia; and the must-not-be-named bloatware
 point-and-click programs, why did I choose gnuplot, a seemingly old-timer
-plotting program? My answer is simple - gnuplot adheres to the DOTADIW principle
-- do one thing, and do it well. Gnuplot also gets yearly updates and continues
-to have reasonable community support. 
+plotting program? My answer is simple - gnuplot adheres to the DOTADIW principle - do one thing, and do it well. 
+Gnuplot also gets yearly updates and continues to have reasonable community support. 
 
 # Templates for gnuplot
 
@@ -86,7 +85,7 @@ PPT_WITH_TITLE = "PPT_FIGSIZE='ppt_with_title'; load '" . GP_CONFIG_DIR . "/pres
 Besides the .gnuplot file, there is a file that defines settings shared by all
 templates. That file is:
 
-```
+```gnuplot
 # ~/.config/gnuplot/common.gp
 # Shared gnuplot defaults for all figure styles.
 # Loaded by ~/.gnuplot at startup.
@@ -441,5 +440,4 @@ ln -sf "$PWD/gnuplot_presentation_svg.gp" ~/.config/gnuplot/presentation_svg.gp
 ln -s  "$PWD/dot_gnuplot" ~/.gnuplot
 ln -sf "$PWD/template.gp" ~/.vim/templates/
 ```
-## References
 
